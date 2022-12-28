@@ -61,7 +61,7 @@
             this.subTypeLabel.AutoSize = true;
             this.subTypeLabel.Location = new System.Drawing.Point(164, 4);
             this.subTypeLabel.Name = "subTypeLabel";
-            this.subTypeLabel.Size = new System.Drawing.Size(88, 13);
+            this.subTypeLabel.Size = new System.Drawing.Size(94, 13);
             this.subTypeLabel.TabIndex = 1;
             this.subTypeLabel.Text = "<Tile Sub-Type:>";
             // 
@@ -70,7 +70,7 @@
             this.flagsLabel.AutoSize = true;
             this.flagsLabel.Location = new System.Drawing.Point(3, 29);
             this.flagsLabel.Name = "flagsLabel";
-            this.flagsLabel.Size = new System.Drawing.Size(47, 13);
+            this.flagsLabel.Size = new System.Drawing.Size(53, 13);
             this.flagsLabel.TabIndex = 2;
             this.flagsLabel.Text = "<Flags:>";
             // 
@@ -91,7 +91,7 @@
             this.paramsLabel.AutoSize = true;
             this.paramsLabel.Location = new System.Drawing.Point(164, 53);
             this.paramsLabel.Name = "paramsLabel";
-            this.paramsLabel.Size = new System.Drawing.Size(131, 13);
+            this.paramsLabel.Size = new System.Drawing.Size(134, 13);
             this.paramsLabel.TabIndex = 4;
             this.paramsLabel.Text = "<Parameters (NO TYPE):>";
             // 
@@ -168,7 +168,7 @@
             this.partialBlockExplainLabel.AutoSize = true;
             this.partialBlockExplainLabel.Location = new System.Drawing.Point(3, 40);
             this.partialBlockExplainLabel.Name = "partialBlockExplainLabel";
-            this.partialBlockExplainLabel.Size = new System.Drawing.Size(192, 13);
+            this.partialBlockExplainLabel.Size = new System.Drawing.Size(211, 13);
             this.partialBlockExplainLabel.TabIndex = 0;
             this.partialBlockExplainLabel.Text = "<The checked quadrants will be solid.>";
             // 
@@ -230,6 +230,7 @@
             this.Controls.Add(this.flagsLabel);
             this.Controls.Add(this.subTypeLabel);
             this.Controls.Add(this.flagsListBox);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "BehaviorEditor";
             this.Size = new System.Drawing.Size(413, 310);
             this.partialBlockParamPanel.ResumeLayout(false);

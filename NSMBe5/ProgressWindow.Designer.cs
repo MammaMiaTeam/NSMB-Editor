@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProgressWindow));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.currentAction = new System.Windows.Forms.Label();
@@ -44,7 +45,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(345, 188);
+            this.textBox1.Size = new System.Drawing.Size(345, 190);
             this.textBox1.TabIndex = 0;
             // 
             // progressBar1
@@ -68,10 +69,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 254);
+            this.ClientSize = new System.Drawing.Size(369, 256);
             this.Controls.Add(this.currentAction);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.textBox1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProgressWindow";
             this.Text = "<_TITLE>";
             this.ResumeLayout(false);

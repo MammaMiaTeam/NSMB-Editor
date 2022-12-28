@@ -59,7 +59,7 @@
             this.saveButton.Image = global::NSMBe5.Properties.Resources.save;
             this.saveButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(94, 22);
+            this.saveButton.Size = new System.Drawing.Size(102, 22);
             this.saveButton.Text = "<saveButton>";
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
@@ -84,11 +84,12 @@
             // lblOffset
             // 
             this.lblOffset.Name = "lblOffset";
-            this.lblOffset.Size = new System.Drawing.Size(50, 22);
+            this.lblOffset.Size = new System.Drawing.Size(55, 22);
             this.lblOffset.Text = "<Offset>";
             // 
             // toolStripTextBox1
             // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
             // 
@@ -98,7 +99,7 @@
             this.goButton.Image = ((System.Drawing.Image)(resources.GetObject("goButton.Image")));
             this.goButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.goButton.Name = "goButton";
-            this.goButton.Size = new System.Drawing.Size(37, 22);
+            this.goButton.Size = new System.Drawing.Size(42, 22);
             this.goButton.Text = "<Go>";
             this.goButton.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -109,6 +110,8 @@
             this.ClientSize = new System.Drawing.Size(749, 396);
             this.Controls.Add(this.hexBox1);
             this.Controls.Add(this.toolStrip1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FileHexEditor";
             this.Text = "<_TITLE>";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FileHexEditor_FormClosing);

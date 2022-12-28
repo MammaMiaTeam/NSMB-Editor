@@ -110,7 +110,7 @@
             this.fgBmpSize_label.AutoSize = true;
             this.fgBmpSize_label.Location = new System.Drawing.Point(169, 118);
             this.fgBmpSize_label.Name = "fgBmpSize_label";
-            this.fgBmpSize_label.Size = new System.Drawing.Size(113, 17);
+            this.fgBmpSize_label.Size = new System.Drawing.Size(90, 13);
             this.fgBmpSize_label.TabIndex = 24;
             this.fgBmpSize_label.Text = "fgBmpSize_label";
             // 
@@ -119,14 +119,14 @@
             this.bgBmpSize_label.AutoSize = true;
             this.bgBmpSize_label.Location = new System.Drawing.Point(169, 145);
             this.bgBmpSize_label.Name = "bgBmpSize_label";
-            this.bgBmpSize_label.Size = new System.Drawing.Size(117, 17);
+            this.bgBmpSize_label.Size = new System.Drawing.Size(93, 13);
             this.bgBmpSize_label.TabIndex = 25;
             this.bgBmpSize_label.Text = "bgBmpSize_label";
             // 
             // BgPNGImportPrompt
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(472, 180);
+            this.ClientSize = new System.Drawing.Size(474, 181);
             this.Controls.Add(this.bgBmpSize_label);
             this.Controls.Add(this.fgBmpSize_label);
             this.Controls.Add(this.label2);
@@ -134,6 +134,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.proceed_btn);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = global::NSMBe5.Properties.Resources.nsmbe;
             this.Name = "BgPNGImportPrompt";
             this.Text = "NSMBe 5.3";

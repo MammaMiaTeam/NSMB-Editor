@@ -22,34 +22,49 @@ using System.IO;
 
 namespace NSMBe5.DSFileSystem
 {
+
     public class ExternalFilesystemSource : FilesystemSource
     {
+
         public string fileName;
 
         public ExternalFilesystemSource(string n)
         {
+
             this.fileName = n;
+
         }
 
         public override Stream load()
         {
+
             s = new FileStream(fileName, FileMode.Open, FileAccess.ReadWrite, FileShare.Read);
+
             return s;
+
         }
 
         public override void save()
         {
-            //just do nothing, any modifications are directly written to disk
+
+            //Just do nothing, any modifications are directly written to disk.
+
         }
 
         public override void close()
         {
+
             s.Close();
+
         }
 
         public override string getDescription()
         {
+
             return fileName;
+
         }
+
     }
+
 }

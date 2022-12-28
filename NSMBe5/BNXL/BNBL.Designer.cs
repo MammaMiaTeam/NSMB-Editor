@@ -59,7 +59,7 @@
             this.saveFile.Location = new System.Drawing.Point(7, 7);
             this.saveFile.Margin = new System.Windows.Forms.Padding(2);
             this.saveFile.Name = "saveFile";
-            this.saveFile.Size = new System.Drawing.Size(64, 24);
+            this.saveFile.Size = new System.Drawing.Size(65, 25);
             this.saveFile.TabIndex = 0;
             this.saveFile.Text = "Save";
             this.saveFile.UseVisualStyleBackColor = true;
@@ -83,7 +83,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(234, 215);
+            this.groupBox1.Size = new System.Drawing.Size(235, 220);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Values";
@@ -98,7 +98,7 @@
             0,
             0});
             this.height_UpDown.Name = "height_UpDown";
-            this.height_UpDown.Size = new System.Drawing.Size(48, 22);
+            this.height_UpDown.Size = new System.Drawing.Size(50, 22);
             this.height_UpDown.TabIndex = 11;
             this.height_UpDown.ValueChanged += new System.EventHandler(this.valueChanged);
             // 
@@ -112,7 +112,7 @@
             0,
             0});
             this.width_UpDown.Name = "width_UpDown";
-            this.width_UpDown.Size = new System.Drawing.Size(48, 22);
+            this.width_UpDown.Size = new System.Drawing.Size(50, 22);
             this.width_UpDown.TabIndex = 10;
             this.width_UpDown.ValueChanged += new System.EventHandler(this.valueChanged);
             // 
@@ -126,7 +126,7 @@
             0,
             0});
             this.yPos_UpDown.Name = "yPos_UpDown";
-            this.yPos_UpDown.Size = new System.Drawing.Size(48, 22);
+            this.yPos_UpDown.Size = new System.Drawing.Size(50, 22);
             this.yPos_UpDown.TabIndex = 9;
             this.yPos_UpDown.ValueChanged += new System.EventHandler(this.valueChanged);
             // 
@@ -140,7 +140,7 @@
             0,
             0});
             this.xPos_UpDown.Name = "xPos_UpDown";
-            this.xPos_UpDown.Size = new System.Drawing.Size(48, 22);
+            this.xPos_UpDown.Size = new System.Drawing.Size(50, 22);
             this.xPos_UpDown.TabIndex = 8;
             this.xPos_UpDown.ValueChanged += new System.EventHandler(this.valueChanged);
             // 
@@ -150,7 +150,7 @@
             this.label6.Location = new System.Drawing.Point(5, 105);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 17);
+            this.label6.Size = new System.Drawing.Size(61, 13);
             this.label6.TabIndex = 7;
             this.label6.Text = "X Position:";
             // 
@@ -160,7 +160,7 @@
             this.label5.Location = new System.Drawing.Point(5, 128);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 17);
+            this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "Y Position:";
             // 
@@ -170,7 +170,7 @@
             this.label4.Location = new System.Drawing.Point(5, 150);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 17);
+            this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Width:";
             // 
@@ -180,7 +180,7 @@
             this.label3.Location = new System.Drawing.Point(5, 173);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 17);
+            this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Height:";
             // 
@@ -194,7 +194,7 @@
             0,
             0});
             this.currentTouchObj_UpDown.Name = "currentTouchObj_UpDown";
-            this.currentTouchObj_UpDown.Size = new System.Drawing.Size(48, 22);
+            this.currentTouchObj_UpDown.Size = new System.Drawing.Size(50, 22);
             this.currentTouchObj_UpDown.TabIndex = 3;
             this.currentTouchObj_UpDown.ValueChanged += new System.EventHandler(this.ObjectClicked);
             // 
@@ -204,7 +204,7 @@
             this.label2.Location = new System.Drawing.Point(5, 60);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 17);
+            this.label2.Size = new System.Drawing.Size(117, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Current touch object:";
             // 
@@ -218,7 +218,7 @@
             0,
             0});
             this.numberOfTouchObjs_UpDown.Name = "numberOfTouchObjs_UpDown";
-            this.numberOfTouchObjs_UpDown.Size = new System.Drawing.Size(48, 22);
+            this.numberOfTouchObjs_UpDown.Size = new System.Drawing.Size(50, 22);
             this.numberOfTouchObjs_UpDown.TabIndex = 1;
             this.numberOfTouchObjs_UpDown.ValueChanged += new System.EventHandler(this.ObjectClicked);
             // 
@@ -228,7 +228,7 @@
             this.label1.Location = new System.Drawing.Point(5, 37);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 17);
+            this.label1.Size = new System.Drawing.Size(138, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Number of touch objects:";
             // 
@@ -246,7 +246,7 @@
             this.openImg.Location = new System.Drawing.Point(391, 7);
             this.openImg.Margin = new System.Windows.Forms.Padding(2);
             this.openImg.Name = "openImg";
-            this.openImg.Size = new System.Drawing.Size(100, 24);
+            this.openImg.Size = new System.Drawing.Size(100, 25);
             this.openImg.TabIndex = 3;
             this.openImg.Text = "Open Image";
             this.openImg.UseVisualStyleBackColor = true;
@@ -255,23 +255,25 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(246, 39);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 17);
+            this.label7.Size = new System.Drawing.Size(62, 13);
             this.label7.TabIndex = 4;
             this.label7.Text = "2D Viewer:";
             // 
             // BNBL
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(512, 261);
+            this.ClientSize = new System.Drawing.Size(514, 261);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.openImg);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.saveFile);
+            this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = global::NSMBe5.Properties.Resources.nsmbe;
             this.Margin = new System.Windows.Forms.Padding(2);

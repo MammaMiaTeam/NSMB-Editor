@@ -125,7 +125,7 @@
             this.lblBitmaps.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblBitmaps.Location = new System.Drawing.Point(0, 0);
             this.lblBitmaps.Name = "lblBitmaps";
-            this.lblBitmaps.Size = new System.Drawing.Size(56, 13);
+            this.lblBitmaps.Size = new System.Drawing.Size(63, 13);
             this.lblBitmaps.TabIndex = 2;
             this.lblBitmaps.Text = "<Bitmaps>";
             // 
@@ -145,7 +145,7 @@
             this.lblPalettes.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblPalettes.Location = new System.Drawing.Point(0, 0);
             this.lblPalettes.Name = "lblPalettes";
-            this.lblPalettes.Size = new System.Drawing.Size(57, 13);
+            this.lblPalettes.Size = new System.Drawing.Size(63, 13);
             this.lblPalettes.TabIndex = 3;
             this.lblPalettes.Text = "<Palettes>";
             // 
@@ -167,7 +167,7 @@
             this.fourBppCheckBox.AutoSize = true;
             this.fourBppCheckBox.Location = new System.Drawing.Point(44, 57);
             this.fourBppCheckBox.Name = "fourBppCheckBox";
-            this.fourBppCheckBox.Size = new System.Drawing.Size(126, 17);
+            this.fourBppCheckBox.Size = new System.Drawing.Size(140, 17);
             this.fourBppCheckBox.TabIndex = 2;
             this.fourBppCheckBox.Text = "<ViewIn4bppFormat>";
             this.fourBppCheckBox.UseVisualStyleBackColor = true;
@@ -183,7 +183,7 @@
             0,
             0});
             this.tileOffsetNumber.Name = "tileOffsetNumber";
-            this.tileOffsetNumber.Size = new System.Drawing.Size(168, 20);
+            this.tileOffsetNumber.Size = new System.Drawing.Size(168, 22);
             this.tileOffsetNumber.TabIndex = 1;
             this.tileOffsetNumber.ValueChanged += new System.EventHandler(this.tileWidthNumber_ValueChanged);
             // 
@@ -192,7 +192,7 @@
             this.lblTileOffset.AutoSize = true;
             this.lblTileOffset.Location = new System.Drawing.Point(3, 33);
             this.lblTileOffset.Name = "lblTileOffset";
-            this.lblTileOffset.Size = new System.Drawing.Size(64, 13);
+            this.lblTileOffset.Size = new System.Drawing.Size(73, 13);
             this.lblTileOffset.TabIndex = 0;
             this.lblTileOffset.Text = "<TileOffset>";
             // 
@@ -211,7 +211,7 @@
             0,
             0});
             this.tileWidthNumber.Name = "tileWidthNumber";
-            this.tileWidthNumber.Size = new System.Drawing.Size(168, 20);
+            this.tileWidthNumber.Size = new System.Drawing.Size(168, 22);
             this.tileWidthNumber.TabIndex = 1;
             this.tileWidthNumber.Value = new decimal(new int[] {
             1,
@@ -225,7 +225,7 @@
             this.lblTileWidth.AutoSize = true;
             this.lblTileWidth.Location = new System.Drawing.Point(3, 7);
             this.lblTileWidth.Name = "lblTileWidth";
-            this.lblTileWidth.Size = new System.Drawing.Size(64, 13);
+            this.lblTileWidth.Size = new System.Drawing.Size(73, 13);
             this.lblTileWidth.TabIndex = 0;
             this.lblTileWidth.Text = "<TileWidth>";
             // 
@@ -251,7 +251,7 @@
             this.autopaletteCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.autopaletteCheckBox.Location = new System.Drawing.Point(6, 159);
             this.autopaletteCheckBox.Name = "autopaletteCheckBox";
-            this.autopaletteCheckBox.Size = new System.Drawing.Size(126, 17);
+            this.autopaletteCheckBox.Size = new System.Drawing.Size(138, 17);
             this.autopaletteCheckBox.TabIndex = 3;
             this.autopaletteCheckBox.Text = "<Auto palette select>";
             this.autopaletteCheckBox.UseVisualStyleBackColor = true;
@@ -320,7 +320,7 @@
             // 
             this.graphicsEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.graphicsEditor1.Location = new System.Drawing.Point(249, 0);
-            this.graphicsEditor1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.graphicsEditor1.Margin = new System.Windows.Forms.Padding(4);
             this.graphicsEditor1.Name = "graphicsEditor1";
             this.graphicsEditor1.Size = new System.Drawing.Size(568, 508);
             this.graphicsEditor1.TabIndex = 4;
@@ -332,6 +332,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.graphicsEditor1);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ImageManager";
             this.Size = new System.Drawing.Size(817, 508);
             this.panel1.ResumeLayout(false);

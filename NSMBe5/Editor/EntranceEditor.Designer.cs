@@ -39,15 +39,15 @@
             this.lblDestEntrance = new System.Windows.Forms.Label();
             this.entranceDestAreaUpDown = new System.Windows.Forms.NumericUpDown();
             this.lblDestArea = new System.Windows.Forms.Label();
-            this.entranceCameraYPosUpDown = new System.Windows.Forms.NumericUpDown();
-            this.entranceCameraXPosUpDown = new System.Windows.Forms.NumericUpDown();
             this.exitOnly = new System.Windows.Forms.CheckBox();
             this.screenFade = new System.Windows.Forms.CheckBox();
             this.connectedPipe = new System.Windows.Forms.CheckBox();
             this.lblEntranceID = new System.Windows.Forms.Label();
+            this.lblCameraY = new System.Windows.Forms.Label();
             this.lblCameraX = new System.Windows.Forms.Label();
             this.entranceNumberUpDown = new System.Windows.Forms.NumericUpDown();
-            this.lblCameraY = new System.Windows.Forms.Label();
+            this.entranceCameraYPosUpDown = new System.Windows.Forms.NumericUpDown();
+            this.entranceCameraXPosUpDown = new System.Windows.Forms.NumericUpDown();
             this.deleteEntranceButton = new System.Windows.Forms.Button();
             this.addEntranceButton = new System.Windows.Forms.Button();
             this.entranceListBox = new System.Windows.Forms.ListBox();
@@ -57,9 +57,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.entrancePipeIDUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entranceDestEntranceUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entranceDestAreaUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.entranceNumberUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entranceCameraYPosUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entranceCameraXPosUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.entranceNumberUpDown)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,7 +116,7 @@
             this.tableLayoutPanel5.SetColumnSpan(this.lowerScreen, 2);
             this.lowerScreen.Location = new System.Drawing.Point(3, 283);
             this.lowerScreen.Name = "lowerScreen";
-            this.lowerScreen.Size = new System.Drawing.Size(149, 17);
+            this.lowerScreen.Size = new System.Drawing.Size(160, 17);
             this.lowerScreen.TabIndex = 21;
             this.lowerScreen.Text = "<DisplayOnLowerScreen>";
             this.lowerScreen.UseVisualStyleBackColor = true;
@@ -144,7 +144,7 @@
             0,
             0});
             this.entranceViewUpDown.Name = "entranceViewUpDown";
-            this.entranceViewUpDown.Size = new System.Drawing.Size(131, 20);
+            this.entranceViewUpDown.Size = new System.Drawing.Size(131, 22);
             this.entranceViewUpDown.TabIndex = 17;
             this.entranceViewUpDown.ValueChanged += new System.EventHandler(this.entranceViewUpDown_ValueChanged);
             // 
@@ -152,9 +152,9 @@
             // 
             this.lblView.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblView.AutoSize = true;
-            this.lblView.Location = new System.Drawing.Point(92, 188);
+            this.lblView.Location = new System.Drawing.Point(86, 188);
             this.lblView.Name = "lblView";
-            this.lblView.Size = new System.Drawing.Size(42, 13);
+            this.lblView.Size = new System.Drawing.Size(48, 13);
             this.lblView.TabIndex = 16;
             this.lblView.Text = "<View>";
             // 
@@ -168,7 +168,7 @@
             0,
             0});
             this.entrancePipeIDUpDown.Name = "entrancePipeIDUpDown";
-            this.entrancePipeIDUpDown.Size = new System.Drawing.Size(131, 20);
+            this.entrancePipeIDUpDown.Size = new System.Drawing.Size(131, 22);
             this.entrancePipeIDUpDown.TabIndex = 15;
             this.entrancePipeIDUpDown.ValueChanged += new System.EventHandler(this.entrancePipeIDUpDown_ValueChanged);
             // 
@@ -176,9 +176,9 @@
             // 
             this.lblConnectedPipe.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblConnectedPipe.AutoSize = true;
-            this.lblConnectedPipe.Location = new System.Drawing.Point(25, 162);
+            this.lblConnectedPipe.Location = new System.Drawing.Point(16, 162);
             this.lblConnectedPipe.Name = "lblConnectedPipe";
-            this.lblConnectedPipe.Size = new System.Drawing.Size(109, 13);
+            this.lblConnectedPipe.Size = new System.Drawing.Size(118, 13);
             this.lblConnectedPipe.TabIndex = 14;
             this.lblConnectedPipe.Text = "<Connected Pipe ID>";
             // 
@@ -192,7 +192,7 @@
             0,
             0});
             this.entranceDestEntranceUpDown.Name = "entranceDestEntranceUpDown";
-            this.entranceDestEntranceUpDown.Size = new System.Drawing.Size(131, 20);
+            this.entranceDestEntranceUpDown.Size = new System.Drawing.Size(131, 22);
             this.entranceDestEntranceUpDown.TabIndex = 13;
             this.entranceDestEntranceUpDown.ValueChanged += new System.EventHandler(this.entranceDestEntranceUpDown_ValueChanged);
             // 
@@ -200,9 +200,9 @@
             // 
             this.lblDestEntrance.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblDestEntrance.AutoSize = true;
-            this.lblDestEntrance.Location = new System.Drawing.Point(16, 136);
+            this.lblDestEntrance.Location = new System.Drawing.Point(3, 136);
             this.lblDestEntrance.Name = "lblDestEntrance";
-            this.lblDestEntrance.Size = new System.Drawing.Size(118, 13);
+            this.lblDestEntrance.Size = new System.Drawing.Size(131, 13);
             this.lblDestEntrance.TabIndex = 12;
             this.lblDestEntrance.Text = "<Destination Entrance>";
             // 
@@ -216,7 +216,7 @@
             0,
             0});
             this.entranceDestAreaUpDown.Name = "entranceDestAreaUpDown";
-            this.entranceDestAreaUpDown.Size = new System.Drawing.Size(131, 20);
+            this.entranceDestAreaUpDown.Size = new System.Drawing.Size(131, 22);
             this.entranceDestAreaUpDown.TabIndex = 11;
             this.entranceDestAreaUpDown.ValueChanged += new System.EventHandler(this.entranceDestAreaUpDown_ValueChanged);
             // 
@@ -224,11 +224,94 @@
             // 
             this.lblDestArea.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblDestArea.AutoSize = true;
-            this.lblDestArea.Location = new System.Drawing.Point(40, 110);
+            this.lblDestArea.Location = new System.Drawing.Point(28, 110);
             this.lblDestArea.Name = "lblDestArea";
-            this.lblDestArea.Size = new System.Drawing.Size(94, 13);
+            this.lblDestArea.Size = new System.Drawing.Size(106, 13);
             this.lblDestArea.TabIndex = 10;
             this.lblDestArea.Text = "<DestinationArea>";
+            // 
+            // exitOnly
+            // 
+            this.exitOnly.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.exitOnly.AutoSize = true;
+            this.tableLayoutPanel5.SetColumnSpan(this.exitOnly, 2);
+            this.exitOnly.Location = new System.Drawing.Point(3, 211);
+            this.exitOnly.Name = "exitOnly";
+            this.exitOnly.Size = new System.Drawing.Size(84, 17);
+            this.exitOnly.TabIndex = 18;
+            this.exitOnly.Text = "<ExitOnly>";
+            this.exitOnly.UseVisualStyleBackColor = true;
+            this.exitOnly.CheckedChanged += new System.EventHandler(this.entranceSetting128_CheckedChanged);
+            // 
+            // screenFade
+            // 
+            this.screenFade.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.screenFade.AutoSize = true;
+            this.tableLayoutPanel5.SetColumnSpan(this.screenFade, 2);
+            this.screenFade.Location = new System.Drawing.Point(3, 235);
+            this.screenFade.Name = "screenFade";
+            this.screenFade.Size = new System.Drawing.Size(182, 17);
+            this.screenFade.TabIndex = 19;
+            this.screenFade.Text = "<UseFadingScreenTransition>";
+            this.screenFade.UseVisualStyleBackColor = true;
+            this.screenFade.CheckedChanged += new System.EventHandler(this.entranceSetting16_CheckedChanged);
+            // 
+            // connectedPipe
+            // 
+            this.connectedPipe.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.connectedPipe.AutoSize = true;
+            this.tableLayoutPanel5.SetColumnSpan(this.connectedPipe, 2);
+            this.connectedPipe.Location = new System.Drawing.Point(3, 259);
+            this.connectedPipe.Name = "connectedPipe";
+            this.connectedPipe.Size = new System.Drawing.Size(120, 17);
+            this.connectedPipe.TabIndex = 20;
+            this.connectedPipe.Text = "<ConnectedPipe>";
+            this.connectedPipe.UseVisualStyleBackColor = true;
+            this.connectedPipe.CheckedChanged += new System.EventHandler(this.entranceSetting8_CheckedChanged);
+            // 
+            // lblEntranceID
+            // 
+            this.lblEntranceID.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblEntranceID.AutoSize = true;
+            this.lblEntranceID.Location = new System.Drawing.Point(55, 32);
+            this.lblEntranceID.Name = "lblEntranceID";
+            this.lblEntranceID.Size = new System.Drawing.Size(79, 13);
+            this.lblEntranceID.TabIndex = 8;
+            this.lblEntranceID.Text = "<EntranceID>";
+            // 
+            // lblCameraY
+            // 
+            this.lblCameraY.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblCameraY.AutoSize = true;
+            this.lblCameraY.Location = new System.Drawing.Point(68, 84);
+            this.lblCameraY.Name = "lblCameraY";
+            this.lblCameraY.Size = new System.Drawing.Size(66, 13);
+            this.lblCameraY.TabIndex = 6;
+            this.lblCameraY.Text = "<CameraY>";
+            // 
+            // lblCameraX
+            // 
+            this.lblCameraX.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblCameraX.AutoSize = true;
+            this.lblCameraX.Location = new System.Drawing.Point(67, 58);
+            this.lblCameraX.Name = "lblCameraX";
+            this.lblCameraX.Size = new System.Drawing.Size(67, 13);
+            this.lblCameraX.TabIndex = 4;
+            this.lblCameraX.Text = "<CameraX>";
+            // 
+            // entranceNumberUpDown
+            // 
+            this.entranceNumberUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.entranceNumberUpDown.Location = new System.Drawing.Point(140, 29);
+            this.entranceNumberUpDown.Maximum = new decimal(new int[] {
+            8191,
+            0,
+            0,
+            0});
+            this.entranceNumberUpDown.Name = "entranceNumberUpDown";
+            this.entranceNumberUpDown.Size = new System.Drawing.Size(131, 22);
+            this.entranceNumberUpDown.TabIndex = 9;
+            this.entranceNumberUpDown.ValueChanged += new System.EventHandler(this.entranceNumberUpDown_ValueChanged);
             // 
             // entranceCameraYPosUpDown
             // 
@@ -245,7 +328,7 @@
             0,
             0});
             this.entranceCameraYPosUpDown.Name = "entranceCameraYPosUpDown";
-            this.entranceCameraYPosUpDown.Size = new System.Drawing.Size(131, 20);
+            this.entranceCameraYPosUpDown.Size = new System.Drawing.Size(131, 22);
             this.entranceCameraYPosUpDown.TabIndex = 7;
             this.entranceCameraYPosUpDown.ValueChanged += new System.EventHandler(this.entranceCameraYPosUpDown_ValueChanged);
             // 
@@ -264,92 +347,9 @@
             0,
             0});
             this.entranceCameraXPosUpDown.Name = "entranceCameraXPosUpDown";
-            this.entranceCameraXPosUpDown.Size = new System.Drawing.Size(131, 20);
+            this.entranceCameraXPosUpDown.Size = new System.Drawing.Size(131, 22);
             this.entranceCameraXPosUpDown.TabIndex = 5;
             this.entranceCameraXPosUpDown.ValueChanged += new System.EventHandler(this.entranceCameraXPosUpDown_ValueChanged);
-            // 
-            // exitOnly
-            // 
-            this.exitOnly.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.exitOnly.AutoSize = true;
-            this.tableLayoutPanel5.SetColumnSpan(this.exitOnly, 2);
-            this.exitOnly.Location = new System.Drawing.Point(3, 211);
-            this.exitOnly.Name = "exitOnly";
-            this.exitOnly.Size = new System.Drawing.Size(76, 17);
-            this.exitOnly.TabIndex = 18;
-            this.exitOnly.Text = "<ExitOnly>";
-            this.exitOnly.UseVisualStyleBackColor = true;
-            this.exitOnly.CheckedChanged += new System.EventHandler(this.entranceSetting128_CheckedChanged);
-            // 
-            // screenFade
-            // 
-            this.screenFade.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.screenFade.AutoSize = true;
-            this.tableLayoutPanel5.SetColumnSpan(this.screenFade, 2);
-            this.screenFade.Location = new System.Drawing.Point(3, 235);
-            this.screenFade.Name = "screenFade";
-            this.screenFade.Size = new System.Drawing.Size(169, 17);
-            this.screenFade.TabIndex = 19;
-            this.screenFade.Text = "<UseFadingScreenTransition>";
-            this.screenFade.UseVisualStyleBackColor = true;
-            this.screenFade.CheckedChanged += new System.EventHandler(this.entranceSetting16_CheckedChanged);
-            // 
-            // connectedPipe
-            // 
-            this.connectedPipe.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.connectedPipe.AutoSize = true;
-            this.tableLayoutPanel5.SetColumnSpan(this.connectedPipe, 2);
-            this.connectedPipe.Location = new System.Drawing.Point(3, 259);
-            this.connectedPipe.Name = "connectedPipe";
-            this.connectedPipe.Size = new System.Drawing.Size(111, 17);
-            this.connectedPipe.TabIndex = 20;
-            this.connectedPipe.Text = "<ConnectedPipe>";
-            this.connectedPipe.UseVisualStyleBackColor = true;
-            this.connectedPipe.CheckedChanged += new System.EventHandler(this.entranceSetting8_CheckedChanged);
-            // 
-            // lblEntranceID
-            // 
-            this.lblEntranceID.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblEntranceID.AutoSize = true;
-            this.lblEntranceID.Location = new System.Drawing.Point(61, 32);
-            this.lblEntranceID.Name = "lblEntranceID";
-            this.lblEntranceID.Size = new System.Drawing.Size(73, 13);
-            this.lblEntranceID.TabIndex = 8;
-            this.lblEntranceID.Text = "<EntranceID>";
-            // 
-            // lblCameraX
-            // 
-            this.lblCameraX.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblCameraX.AutoSize = true;
-            this.lblCameraX.Location = new System.Drawing.Point(72, 58);
-            this.lblCameraX.Name = "lblCameraX";
-            this.lblCameraX.Size = new System.Drawing.Size(62, 13);
-            this.lblCameraX.TabIndex = 4;
-            this.lblCameraX.Text = "<CameraX>";
-            // 
-            // entranceNumberUpDown
-            // 
-            this.entranceNumberUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.entranceNumberUpDown.Location = new System.Drawing.Point(140, 29);
-            this.entranceNumberUpDown.Maximum = new decimal(new int[] {
-            8191,
-            0,
-            0,
-            0});
-            this.entranceNumberUpDown.Name = "entranceNumberUpDown";
-            this.entranceNumberUpDown.Size = new System.Drawing.Size(131, 20);
-            this.entranceNumberUpDown.TabIndex = 9;
-            this.entranceNumberUpDown.ValueChanged += new System.EventHandler(this.entranceNumberUpDown_ValueChanged);
-            // 
-            // lblCameraY
-            // 
-            this.lblCameraY.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblCameraY.AutoSize = true;
-            this.lblCameraY.Location = new System.Drawing.Point(72, 84);
-            this.lblCameraY.Name = "lblCameraY";
-            this.lblCameraY.Size = new System.Drawing.Size(62, 13);
-            this.lblCameraY.TabIndex = 6;
-            this.lblCameraY.Text = "<CameraY>";
             // 
             // deleteEntranceButton
             // 
@@ -402,6 +402,7 @@
             this.Controls.Add(this.entranceListBox);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel5);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "EntranceEditor";
             this.Size = new System.Drawing.Size(274, 508);
             this.tableLayoutPanel5.ResumeLayout(false);
@@ -410,9 +411,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.entrancePipeIDUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.entranceDestEntranceUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.entranceDestAreaUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.entranceNumberUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.entranceCameraYPosUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.entranceCameraXPosUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.entranceNumberUpDown)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

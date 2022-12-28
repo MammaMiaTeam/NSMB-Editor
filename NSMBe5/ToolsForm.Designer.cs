@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToolsForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -66,7 +67,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(293, 236);
+            this.tabControl1.Size = new System.Drawing.Size(294, 236);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -76,7 +77,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(285, 210);
+            this.tabPage1.Size = new System.Drawing.Size(286, 210);
             this.tabPage1.TabIndex = 1;
             this.tabPage1.Text = "<Find>";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -131,14 +132,14 @@
             // SpriteNumber
             // 
             this.SpriteNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.SpriteNumber.Location = new System.Drawing.Point(133, 5);
+            this.SpriteNumber.Location = new System.Drawing.Point(133, 4);
             this.SpriteNumber.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.SpriteNumber.Name = "SpriteNumber";
-            this.SpriteNumber.Size = new System.Drawing.Size(125, 20);
+            this.SpriteNumber.Size = new System.Drawing.Size(125, 22);
             this.SpriteNumber.TabIndex = 1;
             // 
             // lblSpriteNum
@@ -147,7 +148,7 @@
             this.lblSpriteNum.AutoSize = true;
             this.lblSpriteNum.Location = new System.Drawing.Point(3, 8);
             this.lblSpriteNum.Name = "lblSpriteNum";
-            this.lblSpriteNum.Size = new System.Drawing.Size(86, 13);
+            this.lblSpriteNum.Size = new System.Drawing.Size(97, 13);
             this.lblSpriteNum.TabIndex = 0;
             this.lblSpriteNum.Text = "<Sprite Number>";
             // 
@@ -202,7 +203,7 @@
             0,
             0});
             this.nudFindObjNum.Name = "nudFindObjNum";
-            this.nudFindObjNum.Size = new System.Drawing.Size(125, 20);
+            this.nudFindObjNum.Size = new System.Drawing.Size(125, 22);
             this.nudFindObjNum.TabIndex = 7;
             // 
             // lblObjNum
@@ -211,7 +212,7 @@
             this.lblObjNum.AutoSize = true;
             this.lblObjNum.Location = new System.Drawing.Point(3, 31);
             this.lblObjNum.Name = "lblObjNum";
-            this.lblObjNum.Size = new System.Drawing.Size(78, 13);
+            this.lblObjNum.Size = new System.Drawing.Size(87, 13);
             this.lblObjNum.TabIndex = 2;
             this.lblObjNum.Text = "<Object Num.>";
             // 
@@ -225,7 +226,7 @@
             0,
             0});
             this.nudFindTileset.Name = "nudFindTileset";
-            this.nudFindTileset.Size = new System.Drawing.Size(125, 20);
+            this.nudFindTileset.Size = new System.Drawing.Size(125, 22);
             this.nudFindTileset.TabIndex = 1;
             this.nudFindTileset.Value = new decimal(new int[] {
             1,
@@ -239,7 +240,7 @@
             this.lblTileset.AutoSize = true;
             this.lblTileset.Location = new System.Drawing.Point(3, 6);
             this.lblTileset.Name = "lblTileset";
-            this.lblTileset.Size = new System.Drawing.Size(50, 13);
+            this.lblTileset.Size = new System.Drawing.Size(56, 13);
             this.lblTileset.TabIndex = 0;
             this.lblTileset.Text = "<Tileset>";
             // 
@@ -280,9 +281,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(293, 236);
+            this.ClientSize = new System.Drawing.Size(294, 236);
             this.Controls.Add(this.tabControl1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ToolsForm";

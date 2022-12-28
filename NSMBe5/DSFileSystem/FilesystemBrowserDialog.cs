@@ -22,15 +22,18 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using NSMBe5.NSBMD;
+using NSMBe5.TilemapEditor;
 
 namespace NSMBe5.DSFileSystem
 {
     public partial class FilesystemBrowserDialog : Form
     {
-        Filesystem fs;
+        private Filesystem fs;
 
         public FilesystemBrowserDialog(Filesystem fs)
         {
+
             InitializeComponent();
             LanguageManager.ApplyToContainer(this, "FilesystemBrowserDialog");
 
@@ -38,11 +41,16 @@ namespace NSMBe5.DSFileSystem
             filesystemBrowser1.Load(fs);
 
             this.Icon = Properties.Resources.nsmbe;
+
         }
 
         private void FilesystemBrowserDialog_FormClosed(object sender, FormClosedEventArgs e)
         {
+
             fs.close();
+
         }
+
     }
+
 }

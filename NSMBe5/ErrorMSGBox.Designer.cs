@@ -48,10 +48,11 @@ namespace NSMBe5
             this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(12, 128);
+            this.richTextBox1.Location = new System.Drawing.Point(9, 104);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(318, 109);
+            this.richTextBox1.Size = new System.Drawing.Size(246, 89);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -59,9 +60,10 @@ namespace NSMBe5
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(12, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(54, 58);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -72,17 +74,20 @@ namespace NSMBe5
             this.groupBox1.Controls.Add(this.reload_button);
             this.groupBox1.Controls.Add(this.exit_button);
             this.groupBox1.Controls.Add(this.continue_button);
-            this.groupBox1.Location = new System.Drawing.Point(12, 243);
+            this.groupBox1.Location = new System.Drawing.Point(15, 197);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(318, 60);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(238, 49);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
             // reload_button
             // 
-            this.reload_button.Location = new System.Drawing.Point(213, 18);
+            this.reload_button.Location = new System.Drawing.Point(160, 15);
+            this.reload_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.reload_button.Name = "reload_button";
-            this.reload_button.Size = new System.Drawing.Size(96, 32);
+            this.reload_button.Size = new System.Drawing.Size(72, 26);
             this.reload_button.TabIndex = 2;
             this.reload_button.Text = "Reload";
             this.reload_button.UseVisualStyleBackColor = true;
@@ -90,9 +95,10 @@ namespace NSMBe5
             // 
             // exit_button
             // 
-            this.exit_button.Location = new System.Drawing.Point(111, 18);
+            this.exit_button.Location = new System.Drawing.Point(83, 15);
+            this.exit_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exit_button.Name = "exit_button";
-            this.exit_button.Size = new System.Drawing.Size(96, 32);
+            this.exit_button.Size = new System.Drawing.Size(72, 26);
             this.exit_button.TabIndex = 1;
             this.exit_button.Text = "Exit";
             this.exit_button.UseVisualStyleBackColor = true;
@@ -100,9 +106,10 @@ namespace NSMBe5
             // 
             // continue_button
             // 
-            this.continue_button.Location = new System.Drawing.Point(9, 18);
+            this.continue_button.Location = new System.Drawing.Point(7, 15);
+            this.continue_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.continue_button.Name = "continue_button";
-            this.continue_button.Size = new System.Drawing.Size(96, 32);
+            this.continue_button.Size = new System.Drawing.Size(72, 26);
             this.continue_button.TabIndex = 0;
             this.continue_button.Text = "Continue";
             this.continue_button.UseVisualStyleBackColor = true;
@@ -113,9 +120,10 @@ namespace NSMBe5
             this.subtextLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subtextLabel.AutoSize = true;
-            this.subtextLabel.Location = new System.Drawing.Point(12, 100);
+            this.subtextLabel.Location = new System.Drawing.Point(9, 81);
+            this.subtextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.subtextLabel.Name = "subtextLabel";
-            this.subtextLabel.Size = new System.Drawing.Size(306, 17);
+            this.subtextLabel.Size = new System.Drawing.Size(254, 13);
             this.subtextLabel.TabIndex = 3;
             this.subtextLabel.Text = "It is recommend that you reload the application.";
             // 
@@ -123,24 +131,27 @@ namespace NSMBe5
             // 
             this.textLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textLabel.Location = new System.Drawing.Point(90, 14);
+            this.textLabel.Location = new System.Drawing.Point(68, 11);
+            this.textLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.textLabel.Name = "textLabel";
-            this.textLabel.Size = new System.Drawing.Size(240, 84);
+            this.textLabel.Size = new System.Drawing.Size(186, 68);
             this.textLabel.TabIndex = 4;
             this.textLabel.Text = "An unhandled exception has occured!";
             // 
             // ErrorMSGBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 313);
+            this.ClientSize = new System.Drawing.Size(264, 261);
             this.Controls.Add(this.textLabel);
             this.Controls.Add(this.subtextLabel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.richTextBox1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = global::NSMBe5.Properties.Resources.nsmbe;
-            this.MinimumSize = new System.Drawing.Size(360, 360);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(274, 300);
             this.Name = "ErrorMSGBox";
             this.Text = "Error";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

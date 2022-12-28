@@ -34,6 +34,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "XButton";
             this.Size = new System.Drawing.Size(16, 16);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.XButton_Paint);

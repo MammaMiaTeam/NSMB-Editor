@@ -66,33 +66,33 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(328, 52);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(335, 56);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // heightUpDown
             // 
             this.heightUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.heightUpDown.Location = new System.Drawing.Point(205, 29);
+            this.heightUpDown.Location = new System.Drawing.Point(212, 31);
             this.heightUpDown.Name = "heightUpDown";
-            this.heightUpDown.Size = new System.Drawing.Size(120, 20);
+            this.heightUpDown.Size = new System.Drawing.Size(120, 22);
             this.heightUpDown.TabIndex = 7;
             this.heightUpDown.ValueChanged += new System.EventHandler(this.anyUpDownValueChanged);
             // 
             // yUpDown
             // 
             this.yUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.yUpDown.Location = new System.Drawing.Point(23, 29);
+            this.yUpDown.Location = new System.Drawing.Point(22, 31);
             this.yUpDown.Name = "yUpDown";
-            this.yUpDown.Size = new System.Drawing.Size(120, 20);
+            this.yUpDown.Size = new System.Drawing.Size(120, 22);
             this.yUpDown.TabIndex = 6;
             this.yUpDown.ValueChanged += new System.EventHandler(this.anyUpDownValueChanged);
             // 
             // xUpDown
             // 
             this.xUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.xUpDown.Location = new System.Drawing.Point(23, 3);
+            this.xUpDown.Location = new System.Drawing.Point(22, 3);
             this.xUpDown.Name = "xUpDown";
-            this.xUpDown.Size = new System.Drawing.Size(120, 20);
+            this.xUpDown.Size = new System.Drawing.Size(120, 22);
             this.xUpDown.TabIndex = 5;
             this.xUpDown.ValueChanged += new System.EventHandler(this.anyUpDownValueChanged);
             // 
@@ -100,9 +100,9 @@
             // 
             this.lblX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblX.AutoSize = true;
-            this.lblX.Location = new System.Drawing.Point(3, 6);
+            this.lblX.Location = new System.Drawing.Point(3, 7);
             this.lblX.Name = "lblX";
-            this.lblX.Size = new System.Drawing.Size(14, 13);
+            this.lblX.Size = new System.Drawing.Size(13, 13);
             this.lblX.TabIndex = 1;
             this.lblX.Text = "X";
             // 
@@ -110,9 +110,9 @@
             // 
             this.lblWidth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWidth.AutoSize = true;
-            this.lblWidth.Location = new System.Drawing.Point(149, 6);
+            this.lblWidth.Location = new System.Drawing.Point(148, 7);
             this.lblWidth.Name = "lblWidth";
-            this.lblWidth.Size = new System.Drawing.Size(50, 13);
+            this.lblWidth.Size = new System.Drawing.Size(58, 13);
             this.lblWidth.TabIndex = 0;
             this.lblWidth.Text = "<Width>";
             // 
@@ -120,9 +120,9 @@
             // 
             this.lblY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblY.AutoSize = true;
-            this.lblY.Location = new System.Drawing.Point(3, 32);
+            this.lblY.Location = new System.Drawing.Point(3, 35);
             this.lblY.Name = "lblY";
-            this.lblY.Size = new System.Drawing.Size(14, 13);
+            this.lblY.Size = new System.Drawing.Size(13, 13);
             this.lblY.TabIndex = 2;
             this.lblY.Text = "Y";
             // 
@@ -130,18 +130,18 @@
             // 
             this.lblHeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHeight.AutoSize = true;
-            this.lblHeight.Location = new System.Drawing.Point(149, 32);
+            this.lblHeight.Location = new System.Drawing.Point(148, 35);
             this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(50, 13);
+            this.lblHeight.Size = new System.Drawing.Size(58, 13);
             this.lblHeight.TabIndex = 3;
             this.lblHeight.Text = "<Height>";
             // 
             // widthUpDown
             // 
             this.widthUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.widthUpDown.Location = new System.Drawing.Point(205, 3);
+            this.widthUpDown.Location = new System.Drawing.Point(212, 3);
             this.widthUpDown.Name = "widthUpDown";
-            this.widthUpDown.Size = new System.Drawing.Size(120, 20);
+            this.widthUpDown.Size = new System.Drawing.Size(120, 22);
             this.widthUpDown.TabIndex = 4;
             this.widthUpDown.ValueChanged += new System.EventHandler(this.anyUpDownValueChanged);
             // 
@@ -151,8 +151,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "CoordinateViewer";
-            this.Size = new System.Drawing.Size(328, 52);
+            this.Size = new System.Drawing.Size(335, 56);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.heightUpDown)).EndInit();

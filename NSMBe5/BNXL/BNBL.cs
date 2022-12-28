@@ -9,15 +9,18 @@ using System.Windows.Forms;
 
 namespace NSMBe5
 {
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class BNBL : Form
     {
+
         DSFileSystem.File f;
 
         public BNBL(DSFileSystem.File f)
         {
+
             this.f = f;
             f.beginEdit(this);
 
@@ -27,6 +30,7 @@ namespace NSMBe5
 
             LoadBNBL();
             Show();
+
         }
 
         Button2[] objn_button = new Button2[256];
@@ -38,19 +42,24 @@ namespace NSMBe5
 
         public void LoadBNBL()
         {
+
             allowedToCreateButtons = false;
 
             numberOfTouchObjs_UpDown.Value = f.getByteAt(6);
 
             for (int i = 1; i <= numberOfTouchObjs_UpDown.Value; i++)
             {
+
                 objn_button[i] = new Button2()
                 {
+
                     Opacity = 192, //0.75
                     Text = string.Format("Object {0}", i),
                     Name = string.Format("ObjectN_Button_{0}", i),
                     Tag = i
+
                 };
+
                 objn_button[i].Click += new EventHandler(objn_Click);
                 panel1.Controls.Add(objn_button[i]);
 
@@ -71,22 +80,37 @@ namespace NSMBe5
                 objn_height[i] = heightByte;
 
                 //Do some calculations
-                if (xPosAlignmentByte == 1) //If X is centered
+
+                //If X is centered
+                if (xPosAlignmentByte == 1)
                 {
+
                     objn_xPos[i] -= (byte)((widthByte + 1) / 2);
-                }
-                else if (xPosAlignmentByte == 2) //If X is set to Bottom/Right
-                {
-                    objn_xPos[i] -= widthByte;
+
                 }
 
-                if (yPosAlignmentByte == 1) //If Y is centered
+                //If X is set to Bottom/Right
+                else if (xPosAlignmentByte == 2) 
                 {
-                    objn_yPos[i] -= (byte)((heightByte + 1) / 2);
+
+                    objn_xPos[i] -= widthByte;
+
                 }
-                else if (yPosAlignmentByte == 2) //If Y is set to Bottom/Right
+
+                //If Y is centered
+                if (yPosAlignmentByte == 1) 
                 {
+
+                    objn_yPos[i] -= (byte)((heightByte + 1) / 2);
+
+                }
+
+                //If Y is set to Bottom/Right
+                else if (yPosAlignmentByte == 2)
+                {
+
                     objn_yPos[i] -= heightByte;
+
                 }
 
                 objn_button[i].Location = new Point(objn_xPos[i], objn_yPos[i]);
@@ -99,66 +123,94 @@ namespace NSMBe5
                 height_UpDown.Value = objn_height[1];
 
                 ObjectClicked(null, null);
+
             }
+
             currentTouchObj_UpDown.Value = 1;
             allowedToCreateButtons = true;
+
         }
 
         void objn_Click(object sender, EventArgs e)
         {
+
             currentTouchObj_UpDown.Value = (int)(sender as Button2).Tag;
+
         }
 
         private void ObjectClicked(object sender, EventArgs e)
         {
+
             if ( currentTouchObj_UpDown != null && numberOfTouchObjs_UpDown != null)
             {
+
                 currentTouchObj_UpDown.Maximum = numberOfTouchObjs_UpDown.Value;
+
                 if(currentTouchObj_UpDown.Value > currentTouchObj_UpDown.Maximum && currentTouchObj_UpDown.Value != 1)
                 {
+
                     currentTouchObj_UpDown.Value = currentTouchObj_UpDown.Maximum;
+
                 }
 
                 if(xPos_UpDown != null && yPos_UpDown != null && width_UpDown != null && height_UpDown != null)
                 {
+
                     xPos_UpDown.Value = objn_xPos[(byte)currentTouchObj_UpDown.Value];
                     yPos_UpDown.Value = objn_yPos[(byte)currentTouchObj_UpDown.Value];
                     width_UpDown.Value = objn_width[(byte)currentTouchObj_UpDown.Value];
                     height_UpDown.Value = objn_height[(byte)currentTouchObj_UpDown.Value];
+
                 }
 
                 for (int i = 1; i < objn_button.Length; i++)
                 {
+
                     if(objn_button[i] != null)
                     {
+
                         if (currentTouchObj_UpDown.Value == i)
                         {
+
                             objn_button[i].BackColor = Color.FromArgb(Color.Yellow.R, Color.Yellow.G, Color.Yellow.B);
+
                         }
+
                         else
                         {
+
                             objn_button[i].BackColor = Color.FromArgb(221, 221, 221);
+
                         }
 
                         if (i > numberOfTouchObjs_UpDown.Value)
                         {
+
                             panel1.Controls.Remove(objn_button[i]);
                             objn_button[i] = null;
+
                         }
+
                     }
+
                     else if (objn_button[i] == null && i <= numberOfTouchObjs_UpDown.Value)
                     {
+
                         if(allowedToCreateButtons == true)
                         {
+
                             objn_button[i] = new Button2()
                             {
+
                                 Width = 75,
                                 Height = 50,
                                 Opacity = 192, //0.75
                                 Text = string.Format("Object {0}", i),
                                 Name = string.Format("ObjectN_Button_{0}", i),
                                 Tag = i
+
                             };
+
                             objn_button[i].Click += new EventHandler(objn_Click);
                             panel1.Controls.Add(objn_button[i]);
 
@@ -166,10 +218,15 @@ namespace NSMBe5
                             objn_yPos[i] = 0;
                             objn_width[i] = 75;
                             objn_height[i] = 50;
+
                         }
+
                     }
+
                 }
+
             }
+
         }
 
         private void OpenImg_Click(object sender, EventArgs e)
@@ -185,9 +242,12 @@ namespace NSMBe5
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+
                 Bitmap bmpImg = new Bitmap(openFileDialog.FileName);
                 panel1.BackgroundImage = bmpImg;
+
             }
+
         }
 
         async private void valueChanged(object sender, EventArgs e)
@@ -195,8 +255,10 @@ namespace NSMBe5
             await Task.Delay(1);
 
             byte v1 = (byte)currentTouchObj_UpDown.Value;
+
             if (objn_button[v1] != null)
             {
+
                 objn_xPos[v1] = (byte)xPos_UpDown.Value;
                 objn_yPos[v1] = (byte)yPos_UpDown.Value;
                 objn_height[v1] = (byte)height_UpDown.Value;
@@ -205,41 +267,60 @@ namespace NSMBe5
                 objn_button[v1].Location = new Point(objn_xPos[v1], objn_yPos[v1]);
                 objn_button[v1].Width = objn_width[v1];
                 objn_button[v1].Height = objn_height[v1];
+
             }
 
             for (int i = 1; i < objn_button.Length; i++)
             {
+
                 if(objn_button[i] != null)
                 {
+
                     if (objn_width[i] <= 48)
                     {
+
                         objn_button[i].Text = i.ToString();
+
                     }
 
                     if (objn_width[i] > 48)
                     {
+
                         objn_button[i].Text = string.Format("Object {0}", i);
+
                     }
+
                 }
+
             }
+
         }
 
-        /*private void About_Click(object sender, RoutedEventArgs e)
+        /*
+        private void About_Click(object sender, RoutedEventArgs e)
         {
+
             new About().ShowDialog();
-        }*/
+
+        }
+        */
 
         private void BNBL_ClosedEvent(object sender, EventArgs e)
         {
+
             f.endEdit(this);
+
         }
 
         private void SaveFile_Click(object sender, EventArgs e)
         {
+
             using (MemoryStream memoryStream = new MemoryStream())
             {
+
                 using (BinaryWriter bw = new BinaryWriter(memoryStream))
                 {
+
                     bw.Write("JNBL".ToCharArray());
 
                     bw.BaseStream.Position = 0x6;
@@ -247,12 +328,16 @@ namespace NSMBe5
 
                     if (numberOfTouchObjs_UpDown.Value == 0)
                     {
+
                         f.replace(memoryStream.ToArray(), this);
+
                         return;
+
                     }
 
                     for (int i = 1; i <= numberOfTouchObjs_UpDown.Value; i++)
                     {
+
                         bw.BaseStream.Position = 0x8 - 0x6 + (i * 0x6);
                         bw.BaseStream.WriteByte(objn_xPos[i]);
                         bw.BaseStream.Position = 0xA - 0x6 + (i * 0x6);
@@ -261,11 +346,17 @@ namespace NSMBe5
                         bw.BaseStream.WriteByte(objn_width[i]);
                         bw.BaseStream.Position = 0xD - 0x6 + (i * 0x6);
                         bw.BaseStream.WriteByte(objn_height[i]);
+
                     }
 
                     f.replace(memoryStream.ToArray(), this);
+
                 }
+
             }
+
         }
+
     }
+
 }

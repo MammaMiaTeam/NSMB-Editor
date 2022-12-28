@@ -624,6 +624,7 @@ namespace NSMBe5
 
     private void InitializeComponent()
     {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExtraDataEditor));
             this.add = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -703,10 +704,9 @@ namespace NSMBe5
             // 
             // add
             // 
-            this.add.Location = new System.Drawing.Point(16, 443);
-            this.add.Margin = new System.Windows.Forms.Padding(4);
+            this.add.Location = new System.Drawing.Point(12, 360);
             this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(100, 28);
+            this.add.Size = new System.Drawing.Size(75, 23);
             this.add.TabIndex = 1;
             this.add.Text = "Add";
             this.add.UseVisualStyleBackColor = true;
@@ -714,10 +714,9 @@ namespace NSMBe5
             // 
             // delete
             // 
-            this.delete.Location = new System.Drawing.Point(120, 443);
-            this.delete.Margin = new System.Windows.Forms.Padding(4);
+            this.delete.Location = new System.Drawing.Point(90, 360);
             this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(100, 28);
+            this.delete.Size = new System.Drawing.Size(75, 23);
             this.delete.TabIndex = 2;
             this.delete.Text = "Delete";
             this.delete.UseVisualStyleBackColor = true;
@@ -726,85 +725,77 @@ namespace NSMBe5
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(272, 82);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(204, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 17);
+            this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Sprite Data:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(59, 76);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(44, 62);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 17);
+            this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Offset X:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(312, 76);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(234, 62);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 17);
+            this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Offset Y:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(44, 11);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(33, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 17);
+            this.label6.Size = new System.Drawing.Size(61, 13);
             this.label6.TabIndex = 4;
             this.label6.Text = "Particle ID:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(64, 44);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(48, 36);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 17);
+            this.label7.Size = new System.Drawing.Size(42, 13);
             this.label7.TabIndex = 4;
             this.label7.Text = "SFX ID:";
             // 
             // sfxID
             // 
-            this.sfxID.Location = new System.Drawing.Point(131, 42);
-            this.sfxID.Margin = new System.Windows.Forms.Padding(4);
+            this.sfxID.Location = new System.Drawing.Point(98, 34);
             this.sfxID.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.sfxID.Name = "sfxID";
-            this.sfxID.Size = new System.Drawing.Size(127, 22);
+            this.sfxID.Size = new System.Drawing.Size(95, 22);
             this.sfxID.TabIndex = 9;
             this.sfxID.ValueChanged += new System.EventHandler(this.sfxID_ValueChanged);
             // 
             // ID
             // 
-            this.ID.Location = new System.Drawing.Point(364, 48);
-            this.ID.Margin = new System.Windows.Forms.Padding(4);
+            this.ID.Location = new System.Drawing.Point(273, 39);
             this.ID.Maximum = new decimal(new int[] {
             325,
             0,
             0,
             0});
             this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(127, 22);
+            this.ID.Size = new System.Drawing.Size(95, 22);
             this.ID.TabIndex = 4;
             this.ID.ValueChanged += new System.EventHandler(this.ID_ValueChanged);
             // 
             // offsetX
             // 
-            this.offsetX.Location = new System.Drawing.Point(131, 74);
-            this.offsetX.Margin = new System.Windows.Forms.Padding(4);
+            this.offsetX.Location = new System.Drawing.Point(98, 60);
             this.offsetX.Maximum = new decimal(new int[] {
             127,
             0,
@@ -816,14 +807,13 @@ namespace NSMBe5
             0,
             -2147483648});
             this.offsetX.Name = "offsetX";
-            this.offsetX.Size = new System.Drawing.Size(127, 22);
+            this.offsetX.Size = new System.Drawing.Size(95, 22);
             this.offsetX.TabIndex = 6;
             this.offsetX.ValueChanged += new System.EventHandler(this.offsetX_ValueChanged);
             // 
             // offsetY
             // 
-            this.offsetY.Location = new System.Drawing.Point(384, 74);
-            this.offsetY.Margin = new System.Windows.Forms.Padding(4);
+            this.offsetY.Location = new System.Drawing.Point(288, 60);
             this.offsetY.Maximum = new decimal(new int[] {
             127,
             0,
@@ -835,52 +825,47 @@ namespace NSMBe5
             0,
             -2147483648});
             this.offsetY.Name = "offsetY";
-            this.offsetY.Size = new System.Drawing.Size(127, 22);
+            this.offsetY.Size = new System.Drawing.Size(95, 22);
             this.offsetY.TabIndex = 7;
             this.offsetY.ValueChanged += new System.EventHandler(this.offsetY_ValueChanged);
             // 
             // particleID
             // 
-            this.particleID.Location = new System.Drawing.Point(131, 9);
-            this.particleID.Margin = new System.Windows.Forms.Padding(4);
+            this.particleID.Location = new System.Drawing.Point(98, 7);
             this.particleID.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.particleID.Name = "particleID";
-            this.particleID.Size = new System.Drawing.Size(127, 22);
+            this.particleID.Size = new System.Drawing.Size(95, 22);
             this.particleID.TabIndex = 8;
             this.particleID.ValueChanged += new System.EventHandler(this.particleID_ValueChanged);
             // 
             // list
             // 
             this.list.FormattingEnabled = true;
-            this.list.ItemHeight = 16;
-            this.list.Location = new System.Drawing.Point(16, 15);
-            this.list.Margin = new System.Windows.Forms.Padding(4);
+            this.list.Location = new System.Drawing.Point(12, 12);
             this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(203, 420);
+            this.list.Size = new System.Drawing.Size(153, 342);
             this.list.TabIndex = 0;
             this.list.SelectedIndexChanged += new System.EventHandler(this.list_SelectedIndexChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(519, 106);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(389, 86);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 17);
+            this.label12.Size = new System.Drawing.Size(55, 13);
             this.label12.TabIndex = 28;
             this.label12.Text = "(in pixels)";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(519, 76);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(389, 62);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 17);
+            this.label8.Size = new System.Drawing.Size(55, 13);
             this.label8.TabIndex = 28;
             this.label8.Text = "(in pixels)";
             // 
@@ -888,10 +873,9 @@ namespace NSMBe5
             // 
             this.sfxIDName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sfxIDName.FormattingEnabled = true;
-            this.sfxIDName.Location = new System.Drawing.Point(265, 41);
-            this.sfxIDName.Margin = new System.Windows.Forms.Padding(4);
+            this.sfxIDName.Location = new System.Drawing.Point(199, 33);
             this.sfxIDName.Name = "sfxIDName";
-            this.sfxIDName.Size = new System.Drawing.Size(373, 24);
+            this.sfxIDName.Size = new System.Drawing.Size(281, 21);
             this.sfxIDName.TabIndex = 27;
             this.sfxIDName.SelectedIndexChanged += new System.EventHandler(this.sfxIDName_SelectedIndexChanged);
             // 
@@ -1192,10 +1176,9 @@ namespace NSMBe5
             "Tiny upward water splash",
             "Yellow star explosion  ",
             "Tiny stars"});
-            this.particleIDName.Location = new System.Drawing.Point(265, 7);
-            this.particleIDName.Margin = new System.Windows.Forms.Padding(4);
+            this.particleIDName.Location = new System.Drawing.Point(199, 6);
             this.particleIDName.Name = "particleIDName";
-            this.particleIDName.Size = new System.Drawing.Size(373, 24);
+            this.particleIDName.Size = new System.Drawing.Size(281, 21);
             this.particleIDName.TabIndex = 27;
             this.particleIDName.SelectedIndexChanged += new System.EventHandler(this.particleIDName_SelectedIndexChanged);
             // 
@@ -1203,57 +1186,51 @@ namespace NSMBe5
             // 
             this.classIDName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.classIDName.FormattingEnabled = true;
-            this.classIDName.Location = new System.Drawing.Point(364, 15);
-            this.classIDName.Margin = new System.Windows.Forms.Padding(4);
+            this.classIDName.Location = new System.Drawing.Point(273, 12);
             this.classIDName.Name = "classIDName";
-            this.classIDName.Size = new System.Drawing.Size(508, 24);
+            this.classIDName.Size = new System.Drawing.Size(382, 21);
             this.classIDName.TabIndex = 26;
             this.classIDName.SelectedIndexChanged += new System.EventHandler(this.classIDName_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(231, 18);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(173, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 17);
+            this.label2.Size = new System.Drawing.Size(97, 13);
             this.label2.TabIndex = 25;
             this.label2.Text = "Class ID by Name:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(291, 50);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(218, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 25;
             this.label1.Text = "Class ID:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(261, 108);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(196, 88);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 17);
+            this.label11.Size = new System.Drawing.Size(90, 13);
             this.label11.TabIndex = 4;
             this.label11.Text = "Particle Offset Y:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 108);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(6, 88);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 17);
+            this.label10.Size = new System.Drawing.Size(91, 13);
             this.label10.TabIndex = 4;
             this.label10.Text = "Particle Offset X:";
             // 
             // pOffsetY
             // 
-            this.pOffsetY.Location = new System.Drawing.Point(384, 103);
-            this.pOffsetY.Margin = new System.Windows.Forms.Padding(4);
+            this.pOffsetY.Location = new System.Drawing.Point(288, 84);
             this.pOffsetY.Maximum = new decimal(new int[] {
             127,
             0,
@@ -1265,14 +1242,13 @@ namespace NSMBe5
             0,
             -2147483648});
             this.pOffsetY.Name = "pOffsetY";
-            this.pOffsetY.Size = new System.Drawing.Size(127, 22);
+            this.pOffsetY.Size = new System.Drawing.Size(95, 22);
             this.pOffsetY.TabIndex = 7;
             this.pOffsetY.ValueChanged += new System.EventHandler(this.pOffsetY_ValueChanged);
             // 
             // pOffsetX
             // 
-            this.pOffsetX.Location = new System.Drawing.Point(131, 106);
-            this.pOffsetX.Margin = new System.Windows.Forms.Padding(4);
+            this.pOffsetX.Location = new System.Drawing.Point(98, 86);
             this.pOffsetX.Maximum = new decimal(new int[] {
             127,
             0,
@@ -1284,17 +1260,16 @@ namespace NSMBe5
             0,
             -2147483648});
             this.pOffsetX.Name = "pOffsetX";
-            this.pOffsetX.Size = new System.Drawing.Size(127, 22);
+            this.pOffsetX.Size = new System.Drawing.Size(95, 22);
             this.pOffsetX.TabIndex = 6;
             this.pOffsetX.ValueChanged += new System.EventHandler(this.pOffsetX_ValueChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(533, 454);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(400, 369);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(386, 17);
+            this.label13.Size = new System.Drawing.Size(322, 13);
             this.label13.TabIndex = 9;
             this.label13.Text = "The Extra Settings will only work with the related code hacks!";
             // 
@@ -1302,11 +1277,10 @@ namespace NSMBe5
             // 
             this.tabControl.Controls.Add(this.assTab);
             this.tabControl.Controls.Add(this.rotctrlerTab);
-            this.tabControl.Location = new System.Drawing.Point(228, 150);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl.Location = new System.Drawing.Point(171, 122);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(695, 284);
+            this.tabControl.Size = new System.Drawing.Size(521, 231);
             this.tabControl.TabIndex = 10;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
@@ -1330,11 +1304,10 @@ namespace NSMBe5
             this.assTab.Controls.Add(this.offsetY);
             this.assTab.Controls.Add(this.offsetX);
             this.assTab.Controls.Add(this.pOffsetX);
-            this.assTab.Location = new System.Drawing.Point(4, 25);
-            this.assTab.Margin = new System.Windows.Forms.Padding(4);
+            this.assTab.Location = new System.Drawing.Point(4, 22);
             this.assTab.Name = "assTab";
-            this.assTab.Padding = new System.Windows.Forms.Padding(4);
-            this.assTab.Size = new System.Drawing.Size(687, 255);
+            this.assTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.assTab.Size = new System.Drawing.Size(513, 205);
             this.assTab.TabIndex = 0;
             this.assTab.Text = "Actor Spawner Settings";
             this.assTab.UseVisualStyleBackColor = true;
@@ -1342,10 +1315,9 @@ namespace NSMBe5
             // sfxSearch
             // 
             this.sfxSearch.Image = global::NSMBe5.Properties.Resources.search;
-            this.sfxSearch.Location = new System.Drawing.Point(648, 41);
-            this.sfxSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.sfxSearch.Location = new System.Drawing.Point(486, 33);
             this.sfxSearch.Name = "sfxSearch";
-            this.sfxSearch.Size = new System.Drawing.Size(28, 26);
+            this.sfxSearch.Size = new System.Drawing.Size(21, 21);
             this.sfxSearch.TabIndex = 28;
             this.sfxSearch.UseVisualStyleBackColor = true;
             this.sfxSearch.Click += new System.EventHandler(this.sfxSearch_Click);
@@ -1353,10 +1325,9 @@ namespace NSMBe5
             // particleSearch
             // 
             this.particleSearch.Image = global::NSMBe5.Properties.Resources.search;
-            this.particleSearch.Location = new System.Drawing.Point(648, 7);
-            this.particleSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.particleSearch.Location = new System.Drawing.Point(486, 6);
             this.particleSearch.Name = "particleSearch";
-            this.particleSearch.Size = new System.Drawing.Size(28, 26);
+            this.particleSearch.Size = new System.Drawing.Size(21, 21);
             this.particleSearch.TabIndex = 28;
             this.particleSearch.UseVisualStyleBackColor = true;
             this.particleSearch.Click += new System.EventHandler(this.particleSearch_Click);
@@ -1387,11 +1358,10 @@ namespace NSMBe5
             this.rotctrlerTab.Controls.Add(this.tileShiftY);
             this.rotctrlerTab.Controls.Add(this.label14);
             this.rotctrlerTab.Controls.Add(this.zPos);
-            this.rotctrlerTab.Location = new System.Drawing.Point(4, 25);
-            this.rotctrlerTab.Margin = new System.Windows.Forms.Padding(4);
+            this.rotctrlerTab.Location = new System.Drawing.Point(4, 22);
             this.rotctrlerTab.Name = "rotctrlerTab";
-            this.rotctrlerTab.Padding = new System.Windows.Forms.Padding(4);
-            this.rotctrlerTab.Size = new System.Drawing.Size(687, 255);
+            this.rotctrlerTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.rotctrlerTab.Size = new System.Drawing.Size(513, 205);
             this.rotctrlerTab.TabIndex = 1;
             this.rotctrlerTab.Text = "Rotation Controller Settings";
             this.rotctrlerTab.UseVisualStyleBackColor = true;
@@ -1399,34 +1369,31 @@ namespace NSMBe5
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(279, 110);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(209, 89);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(141, 17);
+            this.label22.Size = new System.Drawing.Size(118, 13);
             this.label22.TabIndex = 41;
             this.label22.Text = "Model Rotation Start:";
             // 
             // rotationStart
             // 
-            this.rotationStart.Location = new System.Drawing.Point(429, 107);
-            this.rotationStart.Margin = new System.Windows.Forms.Padding(4);
+            this.rotationStart.Location = new System.Drawing.Point(322, 87);
             this.rotationStart.Maximum = new decimal(new int[] {
             15,
             0,
             0,
             0});
             this.rotationStart.Name = "rotationStart";
-            this.rotationStart.Size = new System.Drawing.Size(127, 22);
+            this.rotationStart.Size = new System.Drawing.Size(95, 22);
             this.rotationStart.TabIndex = 40;
             this.rotationStart.ValueChanged += new System.EventHandler(this.rotationStart_ValueChanged);
             // 
             // spritesNotMoved
             // 
             this.spritesNotMoved.AutoSize = true;
-            this.spritesNotMoved.Location = new System.Drawing.Point(131, 228);
-            this.spritesNotMoved.Margin = new System.Windows.Forms.Padding(4);
+            this.spritesNotMoved.Location = new System.Drawing.Point(98, 185);
             this.spritesNotMoved.Name = "spritesNotMoved";
-            this.spritesNotMoved.Size = new System.Drawing.Size(144, 21);
+            this.spritesNotMoved.Size = new System.Drawing.Size(120, 17);
             this.spritesNotMoved.TabIndex = 39;
             this.spritesNotMoved.Text = "Sprites not Moved";
             this.spritesNotMoved.UseVisualStyleBackColor = true;
@@ -1435,10 +1402,9 @@ namespace NSMBe5
             // unitInHalfTiles
             // 
             this.unitInHalfTiles.AutoSize = true;
-            this.unitInHalfTiles.Location = new System.Drawing.Point(131, 199);
-            this.unitInHalfTiles.Margin = new System.Windows.Forms.Padding(4);
+            this.unitInHalfTiles.Location = new System.Drawing.Point(98, 162);
             this.unitInHalfTiles.Name = "unitInHalfTiles";
-            this.unitInHalfTiles.Size = new System.Drawing.Size(133, 21);
+            this.unitInHalfTiles.Size = new System.Drawing.Size(111, 17);
             this.unitInHalfTiles.TabIndex = 38;
             this.unitInHalfTiles.Text = "Unit in Half Tiles";
             this.unitInHalfTiles.UseVisualStyleBackColor = true;
@@ -1447,10 +1413,9 @@ namespace NSMBe5
             // shiftHalfTileY
             // 
             this.shiftHalfTileY.AutoSize = true;
-            this.shiftHalfTileY.Location = new System.Drawing.Point(131, 171);
-            this.shiftHalfTileY.Margin = new System.Windows.Forms.Padding(4);
+            this.shiftHalfTileY.Location = new System.Drawing.Point(98, 139);
             this.shiftHalfTileY.Name = "shiftHalfTileY";
-            this.shiftHalfTileY.Size = new System.Drawing.Size(120, 21);
+            this.shiftHalfTileY.Size = new System.Drawing.Size(102, 17);
             this.shiftHalfTileY.TabIndex = 37;
             this.shiftHalfTileY.Text = "Shift ½  tile up";
             this.shiftHalfTileY.UseVisualStyleBackColor = true;
@@ -1459,10 +1424,9 @@ namespace NSMBe5
             // shiftHalfTileX
             // 
             this.shiftHalfTileX.AutoSize = true;
-            this.shiftHalfTileX.Location = new System.Drawing.Point(131, 143);
-            this.shiftHalfTileX.Margin = new System.Windows.Forms.Padding(4);
+            this.shiftHalfTileX.Location = new System.Drawing.Point(98, 116);
             this.shiftHalfTileX.Name = "shiftHalfTileX";
-            this.shiftHalfTileX.Size = new System.Drawing.Size(132, 21);
+            this.shiftHalfTileX.Size = new System.Drawing.Size(113, 17);
             this.shiftHalfTileX.TabIndex = 37;
             this.shiftHalfTileX.Text = "Shift ½  tile right";
             this.shiftHalfTileX.UseVisualStyleBackColor = true;
@@ -1476,10 +1440,9 @@ namespace NSMBe5
             "None",
             "Positive",
             "Negative"});
-            this.modelZRot.Location = new System.Drawing.Point(429, 74);
-            this.modelZRot.Margin = new System.Windows.Forms.Padding(4);
+            this.modelZRot.Location = new System.Drawing.Point(322, 60);
             this.modelZRot.Name = "modelZRot";
-            this.modelZRot.Size = new System.Drawing.Size(125, 24);
+            this.modelZRot.Size = new System.Drawing.Size(95, 21);
             this.modelZRot.TabIndex = 36;
             this.modelZRot.SelectedIndexChanged += new System.EventHandler(this.modelZRot_SelectedIndexChanged);
             // 
@@ -1491,10 +1454,9 @@ namespace NSMBe5
             "None",
             "Positive",
             "Negative"});
-            this.modelYRot.Location = new System.Drawing.Point(429, 41);
-            this.modelYRot.Margin = new System.Windows.Forms.Padding(4);
+            this.modelYRot.Location = new System.Drawing.Point(322, 33);
             this.modelYRot.Name = "modelYRot";
-            this.modelYRot.Size = new System.Drawing.Size(125, 24);
+            this.modelYRot.Size = new System.Drawing.Size(95, 21);
             this.modelYRot.TabIndex = 36;
             this.modelYRot.SelectedIndexChanged += new System.EventHandler(this.modelYRot_SelectedIndexChanged);
             // 
@@ -1506,50 +1468,45 @@ namespace NSMBe5
             "None",
             "Positive",
             "Negative"});
-            this.modelXRot.Location = new System.Drawing.Point(429, 7);
-            this.modelXRot.Margin = new System.Windows.Forms.Padding(4);
+            this.modelXRot.Location = new System.Drawing.Point(322, 6);
             this.modelXRot.Name = "modelXRot";
-            this.modelXRot.Size = new System.Drawing.Size(125, 24);
+            this.modelXRot.Size = new System.Drawing.Size(95, 21);
             this.modelXRot.TabIndex = 36;
             this.modelXRot.SelectedIndexChanged += new System.EventHandler(this.modelXRot_SelectedIndexChanged);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(299, 79);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(224, 64);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(120, 17);
+            this.label18.Size = new System.Drawing.Size(100, 13);
             this.label18.TabIndex = 35;
             this.label18.Text = "Model Z Rotation:";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(299, 44);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(224, 36);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(120, 17);
+            this.label17.Size = new System.Drawing.Size(99, 13);
             this.label17.TabIndex = 35;
             this.label17.Text = "Model Y Rotation:";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(299, 11);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(224, 9);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(120, 17);
+            this.label16.Size = new System.Drawing.Size(100, 13);
             this.label16.TabIndex = 35;
             this.label16.Text = "Model X Rotation:";
             // 
             // gapFlag
             // 
             this.gapFlag.AutoSize = true;
-            this.gapFlag.Location = new System.Drawing.Point(429, 171);
-            this.gapFlag.Margin = new System.Windows.Forms.Padding(4);
+            this.gapFlag.Location = new System.Drawing.Point(322, 139);
             this.gapFlag.Name = "gapFlag";
-            this.gapFlag.Size = new System.Drawing.Size(86, 21);
+            this.gapFlag.Size = new System.Drawing.Size(69, 17);
             this.gapFlag.TabIndex = 33;
             this.gapFlag.Text = "Has Gap";
             this.gapFlag.UseVisualStyleBackColor = true;
@@ -1558,10 +1515,9 @@ namespace NSMBe5
             // noSwayAcceleration
             // 
             this.noSwayAcceleration.AutoSize = true;
-            this.noSwayAcceleration.Location = new System.Drawing.Point(429, 199);
-            this.noSwayAcceleration.Margin = new System.Windows.Forms.Padding(4);
+            this.noSwayAcceleration.Location = new System.Drawing.Point(322, 162);
             this.noSwayAcceleration.Name = "noSwayAcceleration";
-            this.noSwayAcceleration.Size = new System.Drawing.Size(167, 21);
+            this.noSwayAcceleration.Size = new System.Drawing.Size(136, 17);
             this.noSwayAcceleration.TabIndex = 33;
             this.noSwayAcceleration.Text = "No Sway Acceleration";
             this.noSwayAcceleration.UseVisualStyleBackColor = true;
@@ -1569,8 +1525,7 @@ namespace NSMBe5
             // 
             // speedMultiplier
             // 
-            this.speedMultiplier.Location = new System.Drawing.Point(131, 42);
-            this.speedMultiplier.Margin = new System.Windows.Forms.Padding(4);
+            this.speedMultiplier.Location = new System.Drawing.Point(98, 34);
             this.speedMultiplier.Maximum = new decimal(new int[] {
             256,
             0,
@@ -1582,7 +1537,7 @@ namespace NSMBe5
             0,
             0});
             this.speedMultiplier.Name = "speedMultiplier";
-            this.speedMultiplier.Size = new System.Drawing.Size(127, 22);
+            this.speedMultiplier.Size = new System.Drawing.Size(95, 22);
             this.speedMultiplier.TabIndex = 31;
             this.speedMultiplier.Value = new decimal(new int[] {
             1,
@@ -1594,116 +1549,106 @@ namespace NSMBe5
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(11, 44);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(8, 36);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(113, 17);
+            this.label21.Size = new System.Drawing.Size(95, 13);
             this.label21.TabIndex = 29;
             this.label21.Text = "Speed Multiplier:";
             // 
             // tileShiftX
             // 
-            this.tileShiftX.Location = new System.Drawing.Point(131, 75);
-            this.tileShiftX.Margin = new System.Windows.Forms.Padding(4);
+            this.tileShiftX.Location = new System.Drawing.Point(98, 61);
             this.tileShiftX.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.tileShiftX.Name = "tileShiftX";
-            this.tileShiftX.Size = new System.Drawing.Size(127, 22);
+            this.tileShiftX.Size = new System.Drawing.Size(95, 22);
             this.tileShiftX.TabIndex = 31;
             this.tileShiftX.ValueChanged += new System.EventHandler(this.tileShiftX_ValueChanged);
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(41, 78);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(31, 63);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(80, 17);
+            this.label20.Size = new System.Drawing.Size(64, 13);
             this.label20.TabIndex = 29;
             this.label20.Text = "Tile Shift X:";
             // 
             // amount
             // 
-            this.amount.Location = new System.Drawing.Point(131, 9);
-            this.amount.Margin = new System.Windows.Forms.Padding(4);
+            this.amount.Location = new System.Drawing.Point(98, 7);
             this.amount.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.amount.Name = "amount";
-            this.amount.Size = new System.Drawing.Size(127, 22);
+            this.amount.Size = new System.Drawing.Size(95, 22);
             this.amount.TabIndex = 31;
             this.amount.ValueChanged += new System.EventHandler(this.amount_ValueChanged);
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(43, 110);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(32, 89);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(80, 17);
+            this.label19.Size = new System.Drawing.Size(63, 13);
             this.label19.TabIndex = 30;
             this.label19.Text = "Tile Shift Y:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(33, 11);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(25, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 17);
+            this.label9.Size = new System.Drawing.Size(75, 13);
             this.label9.TabIndex = 29;
             this.label9.Text = "Sprite Count:";
             // 
             // tileShiftY
             // 
-            this.tileShiftY.Location = new System.Drawing.Point(131, 107);
-            this.tileShiftY.Margin = new System.Windows.Forms.Padding(4);
+            this.tileShiftY.Location = new System.Drawing.Point(98, 87);
             this.tileShiftY.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.tileShiftY.Name = "tileShiftY";
-            this.tileShiftY.Size = new System.Drawing.Size(127, 22);
+            this.tileShiftY.Size = new System.Drawing.Size(95, 22);
             this.tileShiftY.TabIndex = 32;
             this.tileShiftY.ValueChanged += new System.EventHandler(this.tileShiftY_ValueChanged);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(345, 142);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(259, 115);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(75, 17);
+            this.label14.Size = new System.Drawing.Size(61, 13);
             this.label14.TabIndex = 30;
             this.label14.Text = "Z Position:";
             // 
             // zPos
             // 
-            this.zPos.Location = new System.Drawing.Point(429, 139);
-            this.zPos.Margin = new System.Windows.Forms.Padding(4);
+            this.zPos.Location = new System.Drawing.Point(322, 113);
             this.zPos.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.zPos.Name = "zPos";
-            this.zPos.Size = new System.Drawing.Size(127, 22);
+            this.zPos.Size = new System.Drawing.Size(95, 22);
             this.zPos.TabIndex = 32;
             this.zPos.ValueChanged += new System.EventHandler(this.zPos_ValueChanged);
             // 
             // spriteDataTextBox
             // 
             this.spriteDataTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.spriteDataTextBox.Location = new System.Drawing.Point(364, 79);
-            this.spriteDataTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.spriteDataTextBox.Location = new System.Drawing.Point(273, 66);
             this.spriteDataTextBox.Name = "spriteDataTextBox";
-            this.spriteDataTextBox.Size = new System.Drawing.Size(125, 22);
+            this.spriteDataTextBox.Size = new System.Drawing.Size(95, 22);
             this.spriteDataTextBox.TabIndex = 27;
             this.spriteDataTextBox.Text = "00 00 00 00 00 00";
             this.spriteDataTextBox.TextChanged += new System.EventHandler(this.spriteDataTextBox_TextChanged);
@@ -1711,10 +1656,9 @@ namespace NSMBe5
             // classSearch
             // 
             this.classSearch.Image = global::NSMBe5.Properties.Resources.search;
-            this.classSearch.Location = new System.Drawing.Point(881, 15);
-            this.classSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.classSearch.Location = new System.Drawing.Point(661, 12);
             this.classSearch.Name = "classSearch";
-            this.classSearch.Size = new System.Drawing.Size(28, 26);
+            this.classSearch.Size = new System.Drawing.Size(21, 21);
             this.classSearch.TabIndex = 28;
             this.classSearch.UseVisualStyleBackColor = true;
             this.classSearch.Click += new System.EventHandler(this.classSearch_Click);
@@ -1722,32 +1666,30 @@ namespace NSMBe5
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(249, 113);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(187, 92);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(103, 17);
+            this.label15.Size = new System.Drawing.Size(84, 13);
             this.label15.TabIndex = 29;
             this.label15.Text = "Draw Distance:";
             // 
             // drawDistance
             // 
-            this.drawDistance.Location = new System.Drawing.Point(364, 111);
-            this.drawDistance.Margin = new System.Windows.Forms.Padding(4);
+            this.drawDistance.Location = new System.Drawing.Point(273, 90);
             this.drawDistance.Maximum = new decimal(new int[] {
             15,
             0,
             0,
             0});
             this.drawDistance.Name = "drawDistance";
-            this.drawDistance.Size = new System.Drawing.Size(127, 22);
+            this.drawDistance.Size = new System.Drawing.Size(95, 22);
             this.drawDistance.TabIndex = 30;
             this.drawDistance.ValueChanged += new System.EventHandler(this.drawDistance_ValueChanged);
             // 
             // ExtraDataEditor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 482);
+            this.ClientSize = new System.Drawing.Size(704, 396);
             this.Controls.Add(this.drawDistance);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.classSearch);
@@ -1762,8 +1704,9 @@ namespace NSMBe5
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ID);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ExtraDataEditor";
             this.Text = "Extra Settings";
             this.Load += new System.EventHandler(this.ExtDataEditor_Load);

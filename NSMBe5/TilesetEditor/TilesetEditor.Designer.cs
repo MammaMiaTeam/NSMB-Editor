@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TilesetEditor));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tilesetObjectEditor1 = new NSMBe5.TilesetObjectEditor();
@@ -70,7 +71,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(957, 536);
+            this.tabControl1.Size = new System.Drawing.Size(959, 536);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -81,7 +82,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(949, 510);
+            this.tabPage1.Size = new System.Drawing.Size(951, 510);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "<Objects>";
             // 
@@ -90,7 +91,7 @@
             this.tilesetObjectEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tilesetObjectEditor1.Location = new System.Drawing.Point(181, 3);
             this.tilesetObjectEditor1.Name = "tilesetObjectEditor1";
-            this.tilesetObjectEditor1.Size = new System.Drawing.Size(765, 504);
+            this.tilesetObjectEditor1.Size = new System.Drawing.Size(767, 504);
             this.tilesetObjectEditor1.TabIndex = 2;
             this.tilesetObjectEditor1.mustRepaintObjects += new NSMBe5.TilesetObjectEditor.mustRepaintObjectsD(this.mustRepaintObjects);
             this.tilesetObjectEditor1.DescriptionChanged += new NSMBe5.TilesetObjectEditor.changeDescription(this.tilesetObjectEditor1_DescriptionChanged);
@@ -190,7 +191,7 @@
             this.copyPalettes});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(957, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(959, 25);
             this.toolStrip1.TabIndex = 2;
             // 
             // saveButton
@@ -261,9 +262,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(957, 561);
+            this.ClientSize = new System.Drawing.Size(959, 561);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.toolStrip1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TilesetEditor";
             this.Text = "<TilesetEditor>";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TilesetEditor_FormClosed);

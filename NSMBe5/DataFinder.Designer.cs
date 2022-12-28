@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataFinder));
             this.outputTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.findBlockRadioButton = new System.Windows.Forms.RadioButton();
@@ -49,7 +50,7 @@
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.ReadOnly = true;
             this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.outputTextBox.Size = new System.Drawing.Size(407, 140);
+            this.outputTextBox.Size = new System.Drawing.Size(410, 143);
             this.outputTextBox.TabIndex = 0;
             // 
             // label1
@@ -58,7 +59,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(406, 54);
+            this.label1.Size = new System.Drawing.Size(409, 54);
             this.label1.TabIndex = 1;
             this.label1.Text = "<label1>";
             // 
@@ -67,7 +68,7 @@
             this.findBlockRadioButton.AutoSize = true;
             this.findBlockRadioButton.Location = new System.Drawing.Point(16, 71);
             this.findBlockRadioButton.Name = "findBlockRadioButton";
-            this.findBlockRadioButton.Size = new System.Drawing.Size(140, 17);
+            this.findBlockRadioButton.Size = new System.Drawing.Size(154, 17);
             this.findBlockRadioButton.TabIndex = 2;
             this.findBlockRadioButton.TabStop = true;
             this.findBlockRadioButton.Text = "<findBlockRadioButton>";
@@ -78,7 +79,7 @@
             this.findSpriteRadioButton.AutoSize = true;
             this.findSpriteRadioButton.Location = new System.Drawing.Point(16, 95);
             this.findSpriteRadioButton.Name = "findSpriteRadioButton";
-            this.findSpriteRadioButton.Size = new System.Drawing.Size(140, 17);
+            this.findSpriteRadioButton.Size = new System.Drawing.Size(157, 17);
             this.findSpriteRadioButton.TabIndex = 3;
             this.findSpriteRadioButton.TabStop = true;
             this.findSpriteRadioButton.Text = "<findSpriteRadioButton>";
@@ -98,7 +99,7 @@
             0,
             0});
             this.blockNumberUpDown.Name = "blockNumberUpDown";
-            this.blockNumberUpDown.Size = new System.Drawing.Size(60, 20);
+            this.blockNumberUpDown.Size = new System.Drawing.Size(60, 22);
             this.blockNumberUpDown.TabIndex = 4;
             this.blockNumberUpDown.Value = new decimal(new int[] {
             1,
@@ -111,7 +112,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(282, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "<label2>";
             // 
@@ -124,7 +125,7 @@
             0,
             0});
             this.splitCountUpDown.Name = "splitCountUpDown";
-            this.splitCountUpDown.Size = new System.Drawing.Size(79, 20);
+            this.splitCountUpDown.Size = new System.Drawing.Size(79, 22);
             this.splitCountUpDown.TabIndex = 6;
             // 
             // spriteUpDown
@@ -136,7 +137,7 @@
             0,
             0});
             this.spriteUpDown.Name = "spriteUpDown";
-            this.spriteUpDown.Size = new System.Drawing.Size(60, 20);
+            this.spriteUpDown.Size = new System.Drawing.Size(60, 22);
             this.spriteUpDown.TabIndex = 7;
             this.spriteUpDown.Value = new decimal(new int[] {
             1,
@@ -146,9 +147,9 @@
             // 
             // processButton
             // 
-            this.processButton.Location = new System.Drawing.Point(344, 95);
+            this.processButton.Location = new System.Drawing.Point(337, 97);
             this.processButton.Name = "processButton";
-            this.processButton.Size = new System.Drawing.Size(75, 20);
+            this.processButton.Size = new System.Drawing.Size(85, 20);
             this.processButton.TabIndex = 8;
             this.processButton.Text = "<processButton>";
             this.processButton.UseVisualStyleBackColor = true;
@@ -158,7 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 273);
+            this.ClientSize = new System.Drawing.Size(434, 276);
             this.Controls.Add(this.processButton);
             this.Controls.Add(this.spriteUpDown);
             this.Controls.Add(this.splitCountUpDown);
@@ -168,6 +169,8 @@
             this.Controls.Add(this.findBlockRadioButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.outputTextBox);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DataFinder";
             this.Text = "<_TITLE>";
             this.Load += new System.EventHandler(this.DataFinder_Load);

@@ -43,6 +43,7 @@ namespace NSMBe5
 
         public override void RenderSelection(System.Drawing.Graphics g)
         {
+
         }
 
         public override void SelectObject(object o)
@@ -51,6 +52,9 @@ namespace NSMBe5
 
         public override void Refresh()
         {
+
         }
+
     }
+
 }

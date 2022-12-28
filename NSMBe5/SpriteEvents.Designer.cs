@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SpriteEventsViewer));
             this.spriteTable = new System.Windows.Forms.DataGridView();
-            this.refresh = new System.Windows.Forms.Button();
             this.EventID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SpriteNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SpriteName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.spriteTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,16 +59,40 @@
             this.spriteTable.Name = "spriteTable";
             this.spriteTable.ReadOnly = true;
             this.spriteTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.spriteTable.Size = new System.Drawing.Size(366, 221);
+            this.spriteTable.Size = new System.Drawing.Size(369, 225);
             this.spriteTable.TabIndex = 0;
             this.spriteTable.SelectionChanged += new System.EventHandler(this.spriteTable_SelectionChanged);
+            // 
+            // EventID
+            // 
+            this.EventID.DataPropertyName = "eventID";
+            this.EventID.HeaderText = "<Event ID>";
+            this.EventID.Name = "EventID";
+            this.EventID.ReadOnly = true;
+            this.EventID.Width = 90;
+            // 
+            // SpriteNum
+            // 
+            this.SpriteNum.DataPropertyName = "spriteType";
+            this.SpriteNum.HeaderText = "<Sprite Number>";
+            this.SpriteNum.Name = "SpriteNum";
+            this.SpriteNum.ReadOnly = true;
+            this.SpriteNum.Width = 122;
+            // 
+            // SpriteName
+            // 
+            this.SpriteName.DataPropertyName = "spriteName";
+            this.SpriteName.HeaderText = "<Sprite Name>";
+            this.SpriteName.Name = "SpriteName";
+            this.SpriteName.ReadOnly = true;
+            this.SpriteName.Width = 110;
             // 
             // refresh
             // 
             this.refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.refresh.BackgroundImage = global::NSMBe5.Properties.Resources.refresh;
             this.refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.refresh.Location = new System.Drawing.Point(256, 227);
+            this.refresh.Location = new System.Drawing.Point(259, 231);
             this.refresh.Name = "refresh";
             this.refresh.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.refresh.Size = new System.Drawing.Size(98, 23);
@@ -76,37 +101,16 @@
             this.refresh.UseVisualStyleBackColor = true;
             this.refresh.Click += new System.EventHandler(this.ReloadSprites);
             // 
-            // EventID
-            // 
-            this.EventID.DataPropertyName = "eventID";
-            this.EventID.HeaderText = "<Event ID>";
-            this.EventID.Name = "EventID";
-            this.EventID.ReadOnly = true;
-            this.EventID.Width = 84;
-            // 
-            // SpriteNum
-            // 
-            this.SpriteNum.DataPropertyName = "spriteType";
-            this.SpriteNum.HeaderText = "<Sprite Number>";
-            this.SpriteNum.Name = "SpriteNum";
-            this.SpriteNum.ReadOnly = true;
-            this.SpriteNum.Width = 109;
-            // 
-            // SpriteName
-            // 
-            this.SpriteName.DataPropertyName = "spriteName";
-            this.SpriteName.HeaderText = "<Sprite Name>";
-            this.SpriteName.Name = "SpriteName";
-            this.SpriteName.ReadOnly = true;
-            // 
             // SpriteEventsViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 262);
+            this.ClientSize = new System.Drawing.Size(369, 266);
             this.Controls.Add(this.refresh);
             this.Controls.Add(this.spriteTable);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SpriteEventsViewer";
             this.Text = "<Sprite Events>";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SpriteEvents_FormClosing);

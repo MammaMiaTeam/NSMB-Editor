@@ -36,7 +36,7 @@
             this.box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.box.Location = new System.Drawing.Point(0, 10);
             this.box.Name = "box";
-            this.box.Size = new System.Drawing.Size(316, 20);
+            this.box.Size = new System.Drawing.Size(316, 22);
             this.box.TabIndex = 0;
             this.box.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -45,6 +45,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.box);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ByteArrayEditor";
             this.Size = new System.Drawing.Size(319, 42);
             this.ResumeLayout(false);

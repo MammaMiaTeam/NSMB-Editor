@@ -143,7 +143,7 @@
             this.zoomLabel.AutoSize = true;
             this.zoomLabel.Location = new System.Drawing.Point(0, 31);
             this.zoomLabel.Name = "zoomLabel";
-            this.zoomLabel.Size = new System.Drawing.Size(70, 13);
+            this.zoomLabel.Size = new System.Drawing.Size(78, 13);
             this.zoomLabel.TabIndex = 9;
             this.zoomLabel.Text = "<zoomLabel>";
             // 
@@ -152,7 +152,7 @@
             this.hoverStatus.AutoSize = true;
             this.hoverStatus.Location = new System.Drawing.Point(136, 31);
             this.hoverStatus.Name = "hoverStatus";
-            this.hoverStatus.Size = new System.Drawing.Size(76, 13);
+            this.hoverStatus.Size = new System.Drawing.Size(84, 13);
             this.hoverStatus.TabIndex = 10;
             this.hoverStatus.Text = "<hoverStatus>";
             // 
@@ -267,6 +267,7 @@
             this.Controls.Add(this.zoomOut);
             this.Controls.Add(this.zoomActualSize);
             this.Controls.Add(this.zoomIn);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "GraphicsEditor";
             this.Size = new System.Drawing.Size(621, 266);
             this.panel1.ResumeLayout(false);

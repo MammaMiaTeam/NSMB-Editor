@@ -25,77 +25,131 @@ using System.Windows.Forms;
  
 namespace NSMBe5
 {
+
     public partial class BinaryEdit : UserControl
     {
+
         public BinaryEdit()
         {
+
             InitializeComponent();
             AddCheckBoxes();
+
         }
 
-        public int value {
-            get {
+        public int value
+        {
+
+            get
+            {
+
                 int v = 0;
-                if (_CheckBoxCount > 0) {
+
+                if (_CheckBoxCount > 0)
+                {
+
                     CheckBox cb = this.Controls[0] as CheckBox;
-                    for (int l = 0; l < _CheckBoxCount; l++) {
+
+                    for (int l = 0; l < _CheckBoxCount; l++)
+                    {
+
                         if (cb.Checked)
                             v |= 1 << l;
+
                         cb = this.GetNextControl(cb, true) as CheckBox;
+
                     }
+
                 }
+
                 return v;
+
             }
-            set {
-                if (_CheckBoxCount > 0) {
+
+            set
+            {
+
+                if (_CheckBoxCount > 0)
+                {
+
                     CheckBox cb = this.Controls[0] as CheckBox;
-                    for (int l = 0; l < _CheckBoxCount; l++) {
+
+                    for (int l = 0; l < _CheckBoxCount; l++)
+                    {
+
                         cb.Checked = (value & (1 << l)) > 0;
                         cb = this.GetNextControl(cb, true) as CheckBox;
+
                     }
+
                 }
+
             }
+
         }
 
         private int _CheckBoxCount = 8;
 
-        public int CheckBoxCount {
-            get {
+        public int CheckBoxCount
+        {
+
+            get
+            {
+
                 return _CheckBoxCount;
+
             }
-            set {
+
+            set
+            {
+
                 _CheckBoxCount = value;
                 AddCheckBoxes();
+
             }
+
         }
 
         public event EventHandler ValueChanged;
 
         public void RaiseValueChanged()
         {
+
             if (ValueChanged != null)
                 ValueChanged(this, EventArgs.Empty);
+
         }
 
         private void CheckBoxCheckedChanged(object sender, EventArgs e)
         {
+
             RaiseValueChanged();
+
         }
 
-        private void AddCheckBoxes() {
+        private void AddCheckBoxes()
+        {
+
             this.Controls.Clear();
             int pos = 2;
             CheckBox cb;
-            for (int l = 1; l <= _CheckBoxCount; l++) {
+
+            for (int l = 1; l <= _CheckBoxCount; l++)
+            {
+
                 cb = new CheckBox();
                 cb.AutoSize = true;
                 cb.Text = "";
                 cb.Location = new Point(pos, 3);
                 cb.CheckedChanged += new EventHandler(CheckBoxCheckedChanged);
+
                 this.Controls.Add(cb);
                 pos += 17;
+
             }
+
         }
 
     }
+
 }

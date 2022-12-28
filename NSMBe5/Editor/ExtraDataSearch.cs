@@ -66,30 +66,43 @@ namespace NSMBe5
 
     private void InitializeComponent()
     {
-      this.list = new ListBox();
-      this.searchBox = new TextBox();
-      this.SuspendLayout();
-      this.list.FormattingEnabled = true;
-      this.list.Location = new Point(12, 12);
-      this.list.Name = "list";
-      this.list.Size = new Size(260, 303);
-      this.list.TabIndex = 1;
-      this.list.MouseDoubleClick += new MouseEventHandler(this.list_DoubleClick);
-      this.searchBox.Location = new Point(12, 325);
-      this.searchBox.Name = "searchBox";
-      this.searchBox.Size = new Size(260, 20);
-      this.searchBox.TabIndex = 2;
-      this.searchBox.TextChanged += new EventHandler(this.searchBox_TextChanged);
-      this.AutoScaleDimensions = new SizeF(6f, 13f);
-      this.AutoScaleMode = AutoScaleMode.Font;
-      this.ClientSize = new Size(284, 357);
-      this.Controls.Add((Control) this.searchBox);
-      this.Controls.Add((Control) this.list);
-      this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
-      this.Name = "ExtDataSearch";
-      this.Text = "Extra Data - Search";
-      this.ResumeLayout(false);
-      this.PerformLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExtraDataSearch));
+            this.list = new System.Windows.Forms.ListBox();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // list
+            // 
+            this.list.FormattingEnabled = true;
+            this.list.Location = new System.Drawing.Point(12, 12);
+            this.list.Name = "list";
+            this.list.Size = new System.Drawing.Size(260, 303);
+            this.list.TabIndex = 1;
+            this.list.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.list_DoubleClick);
+            // 
+            // searchBox
+            // 
+            this.searchBox.Location = new System.Drawing.Point(12, 325);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(260, 22);
+            this.searchBox.TabIndex = 2;
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
+            // 
+            // ExtraDataSearch
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 361);
+            this.Controls.Add(this.searchBox);
+            this.Controls.Add(this.list);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "ExtraDataSearch";
+            this.Text = "Extra Data - Search";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
     }
   }
 }

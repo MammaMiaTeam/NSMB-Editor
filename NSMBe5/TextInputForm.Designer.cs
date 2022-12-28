@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TextInputForm));
             this.lblPrompt = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.OKbtn = new System.Windows.Forms.Button();
@@ -39,7 +40,7 @@
             this.lblPrompt.AutoSize = true;
             this.lblPrompt.Location = new System.Drawing.Point(12, 9);
             this.lblPrompt.Name = "lblPrompt";
-            this.lblPrompt.Size = new System.Drawing.Size(52, 13);
+            this.lblPrompt.Size = new System.Drawing.Size(60, 13);
             this.lblPrompt.TabIndex = 0;
             this.lblPrompt.Text = "<Prompt>";
             // 
@@ -47,7 +48,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 25);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 20);
+            this.textBox1.Size = new System.Drawing.Size(260, 22);
             this.textBox1.TabIndex = 1;
             // 
             // OKbtn
@@ -77,12 +78,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CancelBtn;
-            this.ClientSize = new System.Drawing.Size(284, 84);
+            this.ClientSize = new System.Drawing.Size(284, 86);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.OKbtn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblPrompt);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TextInputForm";

@@ -21,15 +21,18 @@ using System.Text;
 
 namespace NSMBe5.DSFileSystem
 {
+
 	//Seriouisy, wtf.
     public class BannerFile : PhysicalFile
     {
-        public BannerFile(Filesystem parent, Directory parentDir, File headerFile)
-            : base(parent, parentDir, -9, "banner.bin", headerFile, 0x68, 0, true)
+
+        public BannerFile(Filesystem parent, Directory parentDir, File headerFile) : base(parent, parentDir, -9, "banner.bin", headerFile, 0x68, 0, true)
         {
+
             endFile = null;
             fileSizeP = 0x840;
             refreshOffsets();
+
         }
 
         //Hack to prevent stack overflow...
@@ -37,6 +40,7 @@ namespace NSMBe5.DSFileSystem
 
         public void updateCRC16()
         {
+
             updatingCrc = true;
             byte[] contents = getContents();
             byte[] checksumArea = new byte[0x820];
@@ -45,13 +49,19 @@ namespace NSMBe5.DSFileSystem
             setUshortAt(2, checksum);
             Console.Out.WriteLine("UPDATING BANNER CHECKSUM!!!!");
             updatingCrc = false;
+
         }
 
         public override void endEdition()
         {
+
             base.endEdition();
+
             if(!updatingCrc)
                 updateCRC16();
+
         }
+
     }
+
 }

@@ -74,10 +74,9 @@
             // addPath
             // 
             this.addPath.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.addPath.Location = new System.Drawing.Point(63, 209);
-            this.addPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addPath.Location = new System.Drawing.Point(47, 170);
             this.addPath.Name = "addPath";
-            this.addPath.Size = new System.Drawing.Size(100, 26);
+            this.addPath.Size = new System.Drawing.Size(75, 21);
             this.addPath.TabIndex = 0;
             this.addPath.Text = "<addPath>";
             this.addPath.UseVisualStyleBackColor = true;
@@ -86,10 +85,9 @@
             // deletePath
             // 
             this.deletePath.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.deletePath.Location = new System.Drawing.Point(171, 209);
-            this.deletePath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deletePath.Location = new System.Drawing.Point(128, 170);
             this.deletePath.Name = "deletePath";
-            this.deletePath.Size = new System.Drawing.Size(100, 26);
+            this.deletePath.Size = new System.Drawing.Size(75, 21);
             this.deletePath.TabIndex = 0;
             this.deletePath.Text = "<deletePath>";
             this.deletePath.UseVisualStyleBackColor = true;
@@ -104,36 +102,33 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.lblPathID, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.pathID, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 23);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 19);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(313, 34);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(235, 28);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // lblPathID
             // 
             this.lblPathID.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblPathID.AutoSize = true;
-            this.lblPathID.Location = new System.Drawing.Point(4, 8);
-            this.lblPathID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPathID.Location = new System.Drawing.Point(3, 7);
             this.lblPathID.Name = "lblPathID";
-            this.lblPathID.Size = new System.Drawing.Size(66, 17);
+            this.lblPathID.Size = new System.Drawing.Size(57, 13);
             this.lblPathID.TabIndex = 0;
             this.lblPathID.Text = "<PathID>";
             // 
             // pathID
             // 
-            this.pathID.Location = new System.Drawing.Point(160, 4);
-            this.pathID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pathID.Location = new System.Drawing.Point(120, 3);
             this.pathID.Maximum = new decimal(new int[] {
             65536,
             0,
             0,
             0});
             this.pathID.Name = "pathID";
-            this.pathID.Size = new System.Drawing.Size(149, 22);
+            this.pathID.Size = new System.Drawing.Size(112, 22);
             this.pathID.TabIndex = 1;
             this.pathID.ValueChanged += new System.EventHandler(this.pathID_ValueChanged);
             // 
@@ -143,12 +138,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pathsList.FormattingEnabled = true;
-            this.pathsList.ItemHeight = 16;
             this.pathsList.Location = new System.Drawing.Point(0, 0);
-            this.pathsList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pathsList.Name = "pathsList";
             this.pathsList.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.pathsList.Size = new System.Drawing.Size(332, 196);
+            this.pathsList.Size = new System.Drawing.Size(250, 147);
             this.pathsList.TabIndex = 2;
             this.pathsList.SelectedIndexChanged += new System.EventHandler(this.pathsList_SelectedIndexChanged);
             // 
@@ -157,11 +150,9 @@
             this.grpPathSettings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpPathSettings.Controls.Add(this.tableLayoutPanel1);
-            this.grpPathSettings.Location = new System.Drawing.Point(4, 10);
-            this.grpPathSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpPathSettings.Location = new System.Drawing.Point(3, 8);
             this.grpPathSettings.Name = "grpPathSettings";
-            this.grpPathSettings.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpPathSettings.Size = new System.Drawing.Size(325, 65);
+            this.grpPathSettings.Size = new System.Drawing.Size(244, 53);
             this.grpPathSettings.TabIndex = 3;
             this.grpPathSettings.TabStop = false;
             this.grpPathSettings.Text = "<PathSettings>";
@@ -171,11 +162,9 @@
             this.grpNodeSettings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpNodeSettings.Controls.Add(this.tableLayoutPanel2);
-            this.grpNodeSettings.Location = new System.Drawing.Point(4, 82);
-            this.grpNodeSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpNodeSettings.Location = new System.Drawing.Point(3, 67);
             this.grpNodeSettings.Name = "grpNodeSettings";
-            this.grpNodeSettings.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpNodeSettings.Size = new System.Drawing.Size(325, 225);
+            this.grpNodeSettings.Size = new System.Drawing.Size(244, 183);
             this.grpNodeSettings.TabIndex = 4;
             this.grpNodeSettings.TabStop = false;
             this.grpNodeSettings.Text = "<NodeSettings>";
@@ -200,8 +189,7 @@
             this.tableLayoutPanel2.Controls.Add(this.unk4, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.unk5, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.unk6, 1, 5);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 23);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 19);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -210,19 +198,18 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(313, 194);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(235, 158);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // lblValue1
             // 
             this.lblValue1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblValue1.AutoSize = true;
-            this.lblValue1.Location = new System.Drawing.Point(4, 6);
-            this.lblValue1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblValue1.Location = new System.Drawing.Point(3, 7);
             this.lblValue1.Name = "lblValue1";
-            this.lblValue1.Size = new System.Drawing.Size(68, 17);
+            this.lblValue1.Size = new System.Drawing.Size(57, 13);
             this.lblValue1.TabIndex = 0;
             this.lblValue1.Text = "<Value1>";
             // 
@@ -230,10 +217,9 @@
             // 
             this.lblValue2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblValue2.AutoSize = true;
-            this.lblValue2.Location = new System.Drawing.Point(4, 36);
-            this.lblValue2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblValue2.Location = new System.Drawing.Point(3, 35);
             this.lblValue2.Name = "lblValue2";
-            this.lblValue2.Size = new System.Drawing.Size(68, 17);
+            this.lblValue2.Size = new System.Drawing.Size(57, 13);
             this.lblValue2.TabIndex = 0;
             this.lblValue2.Text = "<Value2>";
             // 
@@ -241,10 +227,9 @@
             // 
             this.lblValue4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblValue4.AutoSize = true;
-            this.lblValue4.Location = new System.Drawing.Point(4, 96);
-            this.lblValue4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblValue4.Location = new System.Drawing.Point(3, 91);
             this.lblValue4.Name = "lblValue4";
-            this.lblValue4.Size = new System.Drawing.Size(68, 17);
+            this.lblValue4.Size = new System.Drawing.Size(57, 13);
             this.lblValue4.TabIndex = 0;
             this.lblValue4.Text = "<Value4>";
             // 
@@ -252,10 +237,9 @@
             // 
             this.lblValue5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblValue5.AutoSize = true;
-            this.lblValue5.Location = new System.Drawing.Point(4, 126);
-            this.lblValue5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblValue5.Location = new System.Drawing.Point(3, 119);
             this.lblValue5.Name = "lblValue5";
-            this.lblValue5.Size = new System.Drawing.Size(68, 17);
+            this.lblValue5.Size = new System.Drawing.Size(57, 13);
             this.lblValue5.TabIndex = 0;
             this.lblValue5.Text = "<Value5>";
             // 
@@ -263,10 +247,9 @@
             // 
             this.lblValue6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblValue6.AutoSize = true;
-            this.lblValue6.Location = new System.Drawing.Point(4, 163);
-            this.lblValue6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblValue6.Location = new System.Drawing.Point(3, 147);
             this.lblValue6.Name = "lblValue6";
-            this.lblValue6.Size = new System.Drawing.Size(68, 17);
+            this.lblValue6.Size = new System.Drawing.Size(57, 13);
             this.lblValue6.TabIndex = 0;
             this.lblValue6.Text = "<Value6>";
             // 
@@ -274,100 +257,93 @@
             // 
             this.lblValue3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblValue3.AutoSize = true;
-            this.lblValue3.Location = new System.Drawing.Point(4, 66);
-            this.lblValue3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblValue3.Location = new System.Drawing.Point(3, 63);
             this.lblValue3.Name = "lblValue3";
-            this.lblValue3.Size = new System.Drawing.Size(68, 17);
+            this.lblValue3.Size = new System.Drawing.Size(57, 13);
             this.lblValue3.TabIndex = 0;
             this.lblValue3.Text = "<Value3>";
             // 
             // unk1
             // 
             this.unk1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.unk1.Location = new System.Drawing.Point(160, 4);
-            this.unk1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unk1.Location = new System.Drawing.Point(120, 3);
             this.unk1.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.unk1.Name = "unk1";
-            this.unk1.Size = new System.Drawing.Size(149, 22);
+            this.unk1.Size = new System.Drawing.Size(112, 22);
             this.unk1.TabIndex = 1;
             this.unk1.ValueChanged += new System.EventHandler(this.unk1_ValueChanged);
             // 
             // unk3
             // 
             this.unk3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.unk3.Location = new System.Drawing.Point(160, 64);
-            this.unk3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unk3.Location = new System.Drawing.Point(120, 59);
             this.unk3.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.unk3.Name = "unk3";
-            this.unk3.Size = new System.Drawing.Size(149, 22);
+            this.unk3.Size = new System.Drawing.Size(112, 22);
             this.unk3.TabIndex = 1;
             this.unk3.ValueChanged += new System.EventHandler(this.unk3_ValueChanged);
             // 
             // unk2
             // 
             this.unk2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.unk2.Location = new System.Drawing.Point(160, 34);
-            this.unk2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unk2.Location = new System.Drawing.Point(120, 31);
             this.unk2.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.unk2.Name = "unk2";
-            this.unk2.Size = new System.Drawing.Size(149, 22);
+            this.unk2.Size = new System.Drawing.Size(112, 22);
             this.unk2.TabIndex = 1;
             this.unk2.ValueChanged += new System.EventHandler(this.unk2_ValueChanged);
             // 
             // unk4
             // 
             this.unk4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.unk4.Location = new System.Drawing.Point(160, 94);
-            this.unk4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unk4.Location = new System.Drawing.Point(120, 87);
             this.unk4.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.unk4.Name = "unk4";
-            this.unk4.Size = new System.Drawing.Size(149, 22);
+            this.unk4.Size = new System.Drawing.Size(112, 22);
             this.unk4.TabIndex = 1;
             this.unk4.ValueChanged += new System.EventHandler(this.unk4_ValueChanged);
             // 
             // unk5
             // 
             this.unk5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.unk5.Location = new System.Drawing.Point(160, 124);
-            this.unk5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unk5.Location = new System.Drawing.Point(120, 115);
             this.unk5.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.unk5.Name = "unk5";
-            this.unk5.Size = new System.Drawing.Size(149, 22);
+            this.unk5.Size = new System.Drawing.Size(112, 22);
             this.unk5.TabIndex = 1;
             this.unk5.ValueChanged += new System.EventHandler(this.unk5_ValueChanged);
             // 
             // unk6
             // 
             this.unk6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.unk6.Location = new System.Drawing.Point(160, 161);
-            this.unk6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unk6.Location = new System.Drawing.Point(120, 143);
             this.unk6.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.unk6.Name = "unk6";
-            this.unk6.Size = new System.Drawing.Size(149, 22);
+            this.unk6.Size = new System.Drawing.Size(112, 22);
             this.unk6.TabIndex = 1;
             this.unk6.ValueChanged += new System.EventHandler(this.unk6_ValueChanged);
             // 
@@ -389,7 +365,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(3, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 17);
+            this.label10.Size = new System.Drawing.Size(53, 13);
             this.label10.TabIndex = 0;
             this.label10.Text = "<label10>";
             // 
@@ -397,7 +373,7 @@
             // 
             this.numericUpDown6.Location = new System.Drawing.Point(61, 3);
             this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(53, 22);
+            this.numericUpDown6.Size = new System.Drawing.Size(53, 20);
             this.numericUpDown6.TabIndex = 1;
             // 
             // panel1
@@ -407,9 +383,8 @@
             this.panel1.Controls.Add(this.pathsList);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(333, 242);
+            this.panel1.Size = new System.Drawing.Size(250, 197);
             this.panel1.TabIndex = 5;
             // 
             // panel2
@@ -417,21 +392,20 @@
             this.panel2.Controls.Add(this.grpNodeSettings);
             this.panel2.Controls.Add(this.grpPathSettings);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 242);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(0, 197);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(333, 311);
+            this.panel2.Size = new System.Drawing.Size(250, 253);
             this.panel2.TabIndex = 3;
             // 
             // PathEditor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "PathEditor";
-            this.Size = new System.Drawing.Size(333, 553);
+            this.Size = new System.Drawing.Size(250, 450);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pathID)).EndInit();

@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LevelHexEditor));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.saveBlockButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -41,7 +42,7 @@
             this.blockComboBox});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(667, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(669, 25);
             this.toolStrip1.TabIndex = 1;
             // 
             // saveBlockButton
@@ -49,7 +50,7 @@
             this.saveBlockButton.Image = global::NSMBe5.Properties.Resources.save;
             this.saveBlockButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveBlockButton.Name = "saveBlockButton";
-            this.saveBlockButton.Size = new System.Drawing.Size(120, 22);
+            this.saveBlockButton.Size = new System.Drawing.Size(131, 22);
             this.saveBlockButton.Text = "<saveBlockButton>";
             this.saveBlockButton.Click += new System.EventHandler(this.saveBlockButton_Click);
             // 
@@ -61,7 +62,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(90, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(102, 22);
             this.toolStripLabel1.Text = "<toolStripLabel1>";
             // 
             // blockComboBox
@@ -94,7 +95,7 @@
             this.hexBox1.Location = new System.Drawing.Point(0, 25);
             this.hexBox1.Name = "hexBox1";
             this.hexBox1.ShadowSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(60)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            this.hexBox1.Size = new System.Drawing.Size(667, 306);
+            this.hexBox1.Size = new System.Drawing.Size(669, 306);
             this.hexBox1.TabIndex = 2;
             this.hexBox1.VScrollBarVisible = true;
             // 
@@ -102,9 +103,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 331);
+            this.ClientSize = new System.Drawing.Size(669, 331);
             this.Controls.Add(this.hexBox1);
             this.Controls.Add(this.toolStrip1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LevelHexEditor";
             this.Text = "<LevelHexEditor>";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LevelHexEditor_FormClosed);

@@ -27,12 +27,15 @@ using System.Globalization;
 
 namespace NSMBe5.DSFileSystem
 {
+
     public partial class FileHexEditor : Form
     {
+
         File f;
 
         public FileHexEditor(File f)
         {
+
             InitializeComponent();
 
             this.f = f;
@@ -43,24 +46,34 @@ namespace NSMBe5.DSFileSystem
 
             hexBox1.ByteProvider = new DynamicByteProvider(f.getContents());
             this.Icon = Properties.Resources.nsmbe;
+
         }
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+
             byte[] data = ((DynamicByteProvider)hexBox1.ByteProvider).Bytes.ToArray();
             f.replace(data, this);
+
         }
 
         private void FileHexEditor_FormClosing(object sender, FormClosingEventArgs e)
         {
+
             f.endEdit(this);
+
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+
             uint offset;
+
             if (uint.TryParse(toolStripTextBox1.Text, NumberStyles.HexNumber, new CultureInfo("en-US"), out offset))
                 hexBox1.Select(offset, 1);
+
         }
+
     }
+
 }

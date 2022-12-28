@@ -55,6 +55,7 @@
             this.emptyTileButton = new System.Windows.Forms.Button();
             this.slopeControlButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.editZone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -131,7 +132,7 @@
             this.description.AutoSize = true;
             this.description.Location = new System.Drawing.Point(9, 223);
             this.description.Name = "description";
-            this.description.Size = new System.Drawing.Size(70, 13);
+            this.description.Size = new System.Drawing.Size(81, 13);
             this.description.TabIndex = 6;
             this.description.Text = "<description>";
             // 
@@ -141,7 +142,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.desc.Location = new System.Drawing.Point(6, 239);
             this.desc.Name = "desc";
-            this.desc.Size = new System.Drawing.Size(145, 20);
+            this.desc.Size = new System.Drawing.Size(145, 22);
             this.desc.TabIndex = 5;
             this.desc.TextChanged += new System.EventHandler(this.desc_TextChanged);
             // 
@@ -165,7 +166,7 @@
             this.lblHeight.AutoSize = true;
             this.lblHeight.Location = new System.Drawing.Point(6, 55);
             this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(50, 13);
+            this.lblHeight.Size = new System.Drawing.Size(58, 13);
             this.lblHeight.TabIndex = 0;
             this.lblHeight.Text = "<Height>";
             // 
@@ -174,7 +175,7 @@
             this.lblWidth.AutoSize = true;
             this.lblWidth.Location = new System.Drawing.Point(6, 16);
             this.lblWidth.Name = "lblWidth";
-            this.lblWidth.Size = new System.Drawing.Size(47, 13);
+            this.lblWidth.Size = new System.Drawing.Size(55, 13);
             this.lblWidth.TabIndex = 0;
             this.lblWidth.Text = "<Width>";
             // 
@@ -189,7 +190,7 @@
             0,
             0});
             this.objWidth.Name = "objWidth";
-            this.objWidth.Size = new System.Drawing.Size(129, 20);
+            this.objWidth.Size = new System.Drawing.Size(129, 22);
             this.objWidth.TabIndex = 2;
             this.objWidth.ValueChanged += new System.EventHandler(this.objWidth_ValueChanged);
             // 
@@ -204,7 +205,7 @@
             0,
             0});
             this.objHeight.Name = "objHeight";
-            this.objHeight.Size = new System.Drawing.Size(129, 20);
+            this.objHeight.Size = new System.Drawing.Size(129, 22);
             this.objHeight.TabIndex = 2;
             this.objHeight.ValueChanged += new System.EventHandler(this.objHeight_ValueChanged);
             // 
@@ -228,7 +229,7 @@
             this.lblMap16Num.AutoSize = true;
             this.lblMap16Num.Location = new System.Drawing.Point(6, 16);
             this.lblMap16Num.Name = "lblMap16Num";
-            this.lblMap16Num.Size = new System.Drawing.Size(89, 13);
+            this.lblMap16Num.Size = new System.Drawing.Size(99, 13);
             this.lblMap16Num.TabIndex = 0;
             this.lblMap16Num.Text = "<Map16Number>";
             // 
@@ -237,7 +238,7 @@
             this.lblControlByte.AutoSize = true;
             this.lblControlByte.Location = new System.Drawing.Point(6, 55);
             this.lblControlByte.Name = "lblControlByte";
-            this.lblControlByte.Size = new System.Drawing.Size(73, 13);
+            this.lblControlByte.Size = new System.Drawing.Size(83, 13);
             this.lblControlByte.TabIndex = 0;
             this.lblControlByte.Text = "<ControlByte>";
             // 
@@ -257,7 +258,7 @@
             0,
             -2147483648});
             this.map16Tile.Name = "map16Tile";
-            this.map16Tile.Size = new System.Drawing.Size(129, 20);
+            this.map16Tile.Size = new System.Drawing.Size(129, 22);
             this.map16Tile.TabIndex = 1;
             this.map16Tile.ValueChanged += new System.EventHandler(this.map16Tile_ValueChanged);
             // 
@@ -273,7 +274,7 @@
             0,
             0});
             this.controlByte.Name = "controlByte";
-            this.controlByte.Size = new System.Drawing.Size(129, 20);
+            this.controlByte.Size = new System.Drawing.Size(129, 22);
             this.controlByte.TabIndex = 1;
             this.controlByte.ValueChanged += new System.EventHandler(this.controlByte_ValueChanged);
             // 
@@ -392,11 +393,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "TilesetObjectEditor";
             this.Size = new System.Drawing.Size(674, 389);
             ((System.ComponentModel.ISupportInitialize)(this.editZone)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

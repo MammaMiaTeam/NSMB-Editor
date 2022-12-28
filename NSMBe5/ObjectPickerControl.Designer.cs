@@ -36,9 +36,9 @@
             this.DrawingArea.Size = new System.Drawing.Size(183, 335);
             this.DrawingArea.TabIndex = 0;
             this.DrawingArea.TabStop = false;
-            this.DrawingArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DrawingArea_MouseMove);
-            this.DrawingArea.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DrawingArea_MouseDown);
             this.DrawingArea.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawingArea_Paint);
+            this.DrawingArea.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DrawingArea_MouseDown);
+            this.DrawingArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DrawingArea_MouseMove);
             // 
             // vScrollBar
             // 
@@ -57,6 +57,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.DrawingArea);
             this.Controls.Add(this.vScrollBar);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ObjectPickerControl";
             this.Size = new System.Drawing.Size(198, 335);
             this.Resize += new System.EventHandler(this.ObjectPickerControl_Resize);

@@ -392,7 +392,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(243, 418);
+            this.tabPage2.Size = new System.Drawing.Size(247, 419);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "<tabPage2>";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -404,7 +404,7 @@
             this.grpBGBottom.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpBGBottom.Location = new System.Drawing.Point(3, 122);
             this.grpBGBottom.Name = "grpBGBottom";
-            this.grpBGBottom.Size = new System.Drawing.Size(237, 74);
+            this.grpBGBottom.Size = new System.Drawing.Size(241, 74);
             this.grpBGBottom.TabIndex = 2;
             this.grpBGBottom.TabStop = false;
             this.grpBGBottom.Text = "<BottomBackground>";
@@ -412,7 +412,7 @@
             // bgBottomLayerPreviewButton
             // 
             this.bgBottomLayerPreviewButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bgBottomLayerPreviewButton.Location = new System.Drawing.Point(156, 43);
+            this.bgBottomLayerPreviewButton.Location = new System.Drawing.Point(160, 43);
             this.bgBottomLayerPreviewButton.Name = "bgBottomLayerPreviewButton";
             this.bgBottomLayerPreviewButton.Size = new System.Drawing.Size(75, 21);
             this.bgBottomLayerPreviewButton.TabIndex = 1;
@@ -425,9 +425,9 @@
             this.bgBottomLayerComboBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.bgBottomLayerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.bgBottomLayerComboBox.FormattingEnabled = true;
-            this.bgBottomLayerComboBox.Location = new System.Drawing.Point(3, 16);
+            this.bgBottomLayerComboBox.Location = new System.Drawing.Point(3, 18);
             this.bgBottomLayerComboBox.Name = "bgBottomLayerComboBox";
-            this.bgBottomLayerComboBox.Size = new System.Drawing.Size(231, 21);
+            this.bgBottomLayerComboBox.Size = new System.Drawing.Size(235, 21);
             this.bgBottomLayerComboBox.TabIndex = 0;
             this.bgBottomLayerComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
@@ -438,7 +438,7 @@
             this.grpBGTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpBGTop.Location = new System.Drawing.Point(3, 49);
             this.grpBGTop.Name = "grpBGTop";
-            this.grpBGTop.Size = new System.Drawing.Size(237, 73);
+            this.grpBGTop.Size = new System.Drawing.Size(241, 73);
             this.grpBGTop.TabIndex = 1;
             this.grpBGTop.TabStop = false;
             this.grpBGTop.Text = "<TopBackground>";
@@ -446,7 +446,7 @@
             // bgTopLayerPreviewButton
             // 
             this.bgTopLayerPreviewButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bgTopLayerPreviewButton.Location = new System.Drawing.Point(156, 43);
+            this.bgTopLayerPreviewButton.Location = new System.Drawing.Point(160, 43);
             this.bgTopLayerPreviewButton.Name = "bgTopLayerPreviewButton";
             this.bgTopLayerPreviewButton.Size = new System.Drawing.Size(75, 21);
             this.bgTopLayerPreviewButton.TabIndex = 1;
@@ -459,9 +459,9 @@
             this.bgTopLayerComboBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.bgTopLayerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.bgTopLayerComboBox.FormattingEnabled = true;
-            this.bgTopLayerComboBox.Location = new System.Drawing.Point(3, 16);
+            this.bgTopLayerComboBox.Location = new System.Drawing.Point(3, 18);
             this.bgTopLayerComboBox.Name = "bgTopLayerComboBox";
-            this.bgTopLayerComboBox.Size = new System.Drawing.Size(231, 21);
+            this.bgTopLayerComboBox.Size = new System.Drawing.Size(235, 21);
             this.bgTopLayerComboBox.TabIndex = 0;
             this.bgTopLayerComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
@@ -471,7 +471,7 @@
             this.grpTileset.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpTileset.Location = new System.Drawing.Point(3, 3);
             this.grpTileset.Name = "grpTileset";
-            this.grpTileset.Size = new System.Drawing.Size(237, 46);
+            this.grpTileset.Size = new System.Drawing.Size(241, 46);
             this.grpTileset.TabIndex = 0;
             this.grpTileset.TabStop = false;
             this.grpTileset.Text = "<Tileset>";
@@ -481,9 +481,9 @@
             this.tilesetComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tilesetComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tilesetComboBox.FormattingEnabled = true;
-            this.tilesetComboBox.Location = new System.Drawing.Point(3, 16);
+            this.tilesetComboBox.Location = new System.Drawing.Point(3, 18);
             this.tilesetComboBox.Name = "tilesetComboBox";
-            this.tilesetComboBox.Size = new System.Drawing.Size(231, 21);
+            this.tilesetComboBox.Size = new System.Drawing.Size(235, 21);
             this.tilesetComboBox.TabIndex = 0;
             this.tilesetComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
@@ -493,7 +493,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(243, 418);
+            this.tabPage1.Size = new System.Drawing.Size(247, 419);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "<tabPage1>";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -526,16 +526,16 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(237, 412);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(241, 413);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // lblStartEntrance
             // 
             this.lblStartEntrance.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblStartEntrance.AutoSize = true;
-            this.lblStartEntrance.Location = new System.Drawing.Point(17, 32);
+            this.lblStartEntrance.Location = new System.Drawing.Point(19, 35);
             this.lblStartEntrance.Name = "lblStartEntrance";
-            this.lblStartEntrance.Size = new System.Drawing.Size(84, 13);
+            this.lblStartEntrance.Size = new System.Drawing.Size(92, 13);
             this.lblStartEntrance.TabIndex = 2;
             this.lblStartEntrance.Text = "<StartEntrance>";
             // 
@@ -543,51 +543,51 @@
             // 
             this.lblTimeLimit.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTimeLimit.AutoSize = true;
-            this.lblTimeLimit.Location = new System.Drawing.Point(38, 6);
+            this.lblTimeLimit.Location = new System.Drawing.Point(40, 7);
             this.lblTimeLimit.Name = "lblTimeLimit";
-            this.lblTimeLimit.Size = new System.Drawing.Size(63, 13);
+            this.lblTimeLimit.Size = new System.Drawing.Size(71, 13);
             this.lblTimeLimit.TabIndex = 1;
             this.lblTimeLimit.Text = "<TimeLimit>";
             // 
             // timeLimitUpDown
             // 
             this.timeLimitUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.timeLimitUpDown.Location = new System.Drawing.Point(107, 3);
+            this.timeLimitUpDown.Location = new System.Drawing.Point(117, 3);
             this.timeLimitUpDown.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
             this.timeLimitUpDown.Name = "timeLimitUpDown";
-            this.timeLimitUpDown.Size = new System.Drawing.Size(127, 20);
+            this.timeLimitUpDown.Size = new System.Drawing.Size(121, 22);
             this.timeLimitUpDown.TabIndex = 0;
             this.timeLimitUpDown.ValueChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
             // startEntranceUpDown
             // 
             this.startEntranceUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.startEntranceUpDown.Location = new System.Drawing.Point(107, 29);
+            this.startEntranceUpDown.Location = new System.Drawing.Point(117, 31);
             this.startEntranceUpDown.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.startEntranceUpDown.Name = "startEntranceUpDown";
-            this.startEntranceUpDown.Size = new System.Drawing.Size(127, 20);
+            this.startEntranceUpDown.Size = new System.Drawing.Size(121, 22);
             this.startEntranceUpDown.TabIndex = 4;
             this.startEntranceUpDown.ValueChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
             // midwayEntranceUpDown
             // 
             this.midwayEntranceUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.midwayEntranceUpDown.Location = new System.Drawing.Point(107, 55);
+            this.midwayEntranceUpDown.Location = new System.Drawing.Point(117, 59);
             this.midwayEntranceUpDown.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.midwayEntranceUpDown.Name = "midwayEntranceUpDown";
-            this.midwayEntranceUpDown.Size = new System.Drawing.Size(127, 20);
+            this.midwayEntranceUpDown.Size = new System.Drawing.Size(121, 22);
             this.midwayEntranceUpDown.TabIndex = 5;
             this.midwayEntranceUpDown.ValueChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
@@ -595,14 +595,14 @@
             // 
             this.soundSetUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.soundSetUpDown.Hexadecimal = true;
-            this.soundSetUpDown.Location = new System.Drawing.Point(107, 81);
+            this.soundSetUpDown.Location = new System.Drawing.Point(117, 87);
             this.soundSetUpDown.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.soundSetUpDown.Name = "soundSetUpDown";
-            this.soundSetUpDown.Size = new System.Drawing.Size(127, 20);
+            this.soundSetUpDown.Size = new System.Drawing.Size(121, 22);
             this.soundSetUpDown.TabIndex = 5;
             this.soundSetUpDown.ValueChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
@@ -610,9 +610,9 @@
             // 
             this.lblMidwayEntrance.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblMidwayEntrance.AutoSize = true;
-            this.lblMidwayEntrance.Location = new System.Drawing.Point(3, 58);
+            this.lblMidwayEntrance.Location = new System.Drawing.Point(3, 63);
             this.lblMidwayEntrance.Name = "lblMidwayEntrance";
-            this.lblMidwayEntrance.Size = new System.Drawing.Size(98, 13);
+            this.lblMidwayEntrance.Size = new System.Drawing.Size(108, 13);
             this.lblMidwayEntrance.TabIndex = 3;
             this.lblMidwayEntrance.Text = "<MidwayEntrance>";
             // 
@@ -620,9 +620,9 @@
             // 
             this.lblSoundSet.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblSoundSet.AutoSize = true;
-            this.lblSoundSet.Location = new System.Drawing.Point(35, 84);
+            this.lblSoundSet.Location = new System.Drawing.Point(38, 91);
             this.lblSoundSet.Name = "lblSoundSet";
-            this.lblSoundSet.Size = new System.Drawing.Size(66, 13);
+            this.lblSoundSet.Size = new System.Drawing.Size(73, 13);
             this.lblSoundSet.TabIndex = 3;
             this.lblSoundSet.Text = "<SoundSet>";
             // 
@@ -631,9 +631,9 @@
             this.levelWrapCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.levelWrapCheckBox.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.levelWrapCheckBox, 2);
-            this.levelWrapCheckBox.Location = new System.Drawing.Point(3, 107);
+            this.levelWrapCheckBox.Location = new System.Drawing.Point(3, 115);
             this.levelWrapCheckBox.Name = "levelWrapCheckBox";
-            this.levelWrapCheckBox.Size = new System.Drawing.Size(135, 17);
+            this.levelWrapCheckBox.Size = new System.Drawing.Size(142, 17);
             this.levelWrapCheckBox.TabIndex = 6;
             this.levelWrapCheckBox.Text = "<levelWrapCheckBox>";
             this.levelWrapCheckBox.UseVisualStyleBackColor = true;
@@ -644,9 +644,9 @@
             this.forceMiniCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.forceMiniCheckBox.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.forceMiniCheckBox, 2);
-            this.forceMiniCheckBox.Location = new System.Drawing.Point(3, 130);
+            this.forceMiniCheckBox.Location = new System.Drawing.Point(3, 138);
             this.forceMiniCheckBox.Name = "forceMiniCheckBox";
-            this.forceMiniCheckBox.Size = new System.Drawing.Size(111, 17);
+            this.forceMiniCheckBox.Size = new System.Drawing.Size(125, 17);
             this.forceMiniCheckBox.TabIndex = 6;
             this.forceMiniCheckBox.Text = "<force mini mario>";
             this.forceMiniCheckBox.UseVisualStyleBackColor = true;
@@ -657,9 +657,9 @@
             this.miniMarioPhysicsCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.miniMarioPhysicsCheckBox.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.miniMarioPhysicsCheckBox, 2);
-            this.miniMarioPhysicsCheckBox.Location = new System.Drawing.Point(3, 153);
+            this.miniMarioPhysicsCheckBox.Location = new System.Drawing.Point(3, 161);
             this.miniMarioPhysicsCheckBox.Name = "miniMarioPhysicsCheckBox";
-            this.miniMarioPhysicsCheckBox.Size = new System.Drawing.Size(122, 17);
+            this.miniMarioPhysicsCheckBox.Size = new System.Drawing.Size(136, 17);
             this.miniMarioPhysicsCheckBox.TabIndex = 6;
             this.miniMarioPhysicsCheckBox.Text = "<mini mario physics>";
             this.miniMarioPhysicsCheckBox.UseVisualStyleBackColor = true;
@@ -674,7 +674,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(251, 444);
+            this.tabControl1.Size = new System.Drawing.Size(255, 445);
             this.tabControl1.TabIndex = 6;
             // 
             // LevelConfig
@@ -682,8 +682,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tabControl1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "LevelConfig";
-            this.Size = new System.Drawing.Size(251, 444);
+            this.Size = new System.Drawing.Size(255, 445);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

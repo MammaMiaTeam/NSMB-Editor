@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.grpOpenROM = new System.Windows.Forms.GroupBox();
             this.openRomButton = new System.Windows.Forms.Button();
             this.grpServer = new System.Windows.Forms.GroupBox();
@@ -48,7 +49,7 @@
             this.grpOpenROM.Controls.Add(this.openRomButton);
             this.grpOpenROM.Location = new System.Drawing.Point(12, 37);
             this.grpOpenROM.Name = "grpOpenROM";
-            this.grpOpenROM.Size = new System.Drawing.Size(262, 60);
+            this.grpOpenROM.Size = new System.Drawing.Size(265, 60);
             this.grpOpenROM.TabIndex = 0;
             this.grpOpenROM.TabStop = false;
             this.grpOpenROM.Text = "<Open ROM file>";
@@ -74,7 +75,7 @@
             this.grpServer.Controls.Add(this.connectButton);
             this.grpServer.Location = new System.Drawing.Point(12, 103);
             this.grpServer.Name = "grpServer";
-            this.grpServer.Size = new System.Drawing.Size(262, 103);
+            this.grpServer.Size = new System.Drawing.Size(265, 103);
             this.grpServer.TabIndex = 1;
             this.grpServer.TabStop = false;
             this.grpServer.Text = "<Connect to server>";
@@ -82,18 +83,18 @@
             // lblPort
             // 
             this.lblPort.AutoSize = true;
-            this.lblPort.Location = new System.Drawing.Point(6, 48);
+            this.lblPort.Location = new System.Drawing.Point(1, 50);
             this.lblPort.Name = "lblPort";
-            this.lblPort.Size = new System.Drawing.Size(41, 13);
+            this.lblPort.Size = new System.Drawing.Size(47, 13);
             this.lblPort.TabIndex = 4;
             this.lblPort.Text = "<Port:>";
             // 
             // lblHost
             // 
             this.lblHost.AutoSize = true;
-            this.lblHost.Location = new System.Drawing.Point(6, 22);
+            this.lblHost.Location = new System.Drawing.Point(1, 22);
             this.lblHost.Name = "lblHost";
-            this.lblHost.Size = new System.Drawing.Size(41, 13);
+            this.lblHost.Size = new System.Drawing.Size(47, 13);
             this.lblHost.TabIndex = 3;
             this.lblHost.Text = "<Host>";
             // 
@@ -103,7 +104,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.portTextBox.Location = new System.Drawing.Point(47, 45);
             this.portTextBox.Name = "portTextBox";
-            this.portTextBox.Size = new System.Drawing.Size(209, 20);
+            this.portTextBox.Size = new System.Drawing.Size(212, 22);
             this.portTextBox.TabIndex = 2;
             this.portTextBox.Text = "7373";
             // 
@@ -113,13 +114,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.hostTextBox.Location = new System.Drawing.Point(47, 19);
             this.hostTextBox.Name = "hostTextBox";
-            this.hostTextBox.Size = new System.Drawing.Size(209, 20);
+            this.hostTextBox.Size = new System.Drawing.Size(212, 22);
             this.hostTextBox.TabIndex = 1;
             // 
             // connectButton
             // 
             this.connectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.connectButton.Location = new System.Drawing.Point(146, 71);
+            this.connectButton.Location = new System.Drawing.Point(149, 71);
             this.connectButton.Name = "connectButton";
             this.connectButton.Size = new System.Drawing.Size(110, 23);
             this.connectButton.TabIndex = 0;
@@ -132,7 +133,7 @@
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Location = new System.Drawing.Point(12, 9);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(152, 13);
+            this.lblWelcome.Size = new System.Drawing.Size(163, 13);
             this.lblWelcome.TabIndex = 4;
             this.lblWelcome.Text = "<Welcome to NSMB Editor 5!>";
             // 
@@ -140,11 +141,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(286, 218);
+            this.ClientSize = new System.Drawing.Size(289, 221);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.grpServer);
             this.Controls.Add(this.grpOpenROM);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "StartForm";
             this.Text = "<NSMB Editor 5>";

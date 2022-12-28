@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaletteViewer));
             this.paletteList = new System.Windows.Forms.ListBox();
             this.is4bpp = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,7 +47,7 @@
             this.paletteList.FormattingEnabled = true;
             this.paletteList.Location = new System.Drawing.Point(0, 0);
             this.paletteList.Name = "paletteList";
-            this.paletteList.Size = new System.Drawing.Size(144, 266);
+            this.paletteList.Size = new System.Drawing.Size(144, 269);
             this.paletteList.TabIndex = 0;
             this.paletteList.SelectedIndexChanged += new System.EventHandler(this.paletteList_SelectedIndexChanged);
             // 
@@ -54,7 +55,7 @@
             // 
             this.is4bpp.AutoSize = true;
             this.is4bpp.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.is4bpp.Location = new System.Drawing.Point(0, 266);
+            this.is4bpp.Location = new System.Drawing.Point(0, 269);
             this.is4bpp.Name = "is4bpp";
             this.is4bpp.Size = new System.Drawing.Size(144, 17);
             this.is4bpp.TabIndex = 1;
@@ -67,7 +68,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(144, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(379, 243);
+            this.pictureBox1.Size = new System.Drawing.Size(380, 246);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
@@ -79,7 +80,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(144, 283);
+            this.panel1.Size = new System.Drawing.Size(144, 286);
             this.panel1.TabIndex = 3;
             // 
             // panel2
@@ -87,9 +88,9 @@
             this.panel2.Controls.Add(this.addAllToManager);
             this.panel2.Controls.Add(this.addToManager);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(144, 243);
+            this.panel2.Location = new System.Drawing.Point(144, 246);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(379, 40);
+            this.panel2.Size = new System.Drawing.Size(380, 40);
             this.panel2.TabIndex = 4;
             // 
             // addAllToManager
@@ -116,10 +117,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 283);
+            this.ClientSize = new System.Drawing.Size(524, 286);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PaletteViewer";
             this.Text = "<PaletteViewer>";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -215,7 +215,7 @@
             // NSCPrompt
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(402, 223);
+            this.ClientSize = new System.Drawing.Size(404, 226);
             this.Controls.Add(this.res_label);
             this.Controls.Add(this.proceed_btn);
             this.Controls.Add(this.label4);
@@ -227,6 +227,7 @@
             this.Controls.Add(this.tilewidth_UpDown);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = global::NSMBe5.Properties.Resources.nsmbe;
             this.Name = "NSCPrompt";
             this.Text = "NSMBe 5.3";

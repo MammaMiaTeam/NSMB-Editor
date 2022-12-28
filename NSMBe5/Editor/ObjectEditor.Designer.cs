@@ -50,7 +50,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(278, 423);
+            this.tabControl1.Size = new System.Drawing.Size(280, 425);
             this.tabControl1.TabIndex = 15;
             // 
             // tileset0tab
@@ -59,7 +59,7 @@
             this.tileset0tab.Location = new System.Drawing.Point(4, 22);
             this.tileset0tab.Name = "tileset0tab";
             this.tileset0tab.Padding = new System.Windows.Forms.Padding(3);
-            this.tileset0tab.Size = new System.Drawing.Size(270, 397);
+            this.tileset0tab.Size = new System.Drawing.Size(272, 399);
             this.tileset0tab.TabIndex = 0;
             this.tileset0tab.Text = "<Tileset 0>";
             this.tileset0tab.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@
             this.tileset0picker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tileset0picker.Location = new System.Drawing.Point(3, 3);
             this.tileset0picker.Name = "tileset0picker";
-            this.tileset0picker.Size = new System.Drawing.Size(264, 391);
+            this.tileset0picker.Size = new System.Drawing.Size(266, 393);
             this.tileset0picker.TabIndex = 0;
             this.tileset0picker.ObjectSelected += new NSMBe5.ObjectPickerControlNew.ObjectSelectedDelegate(this.tileset0picker_ObjectSelected);
             // 
@@ -117,8 +117,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tabControl1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ObjectEditor";
-            this.Size = new System.Drawing.Size(278, 423);
+            this.Size = new System.Drawing.Size(280, 425);
             this.tabControl1.ResumeLayout(false);
             this.tileset0tab.ResumeLayout(false);
             this.tileset1tab.ResumeLayout(false);

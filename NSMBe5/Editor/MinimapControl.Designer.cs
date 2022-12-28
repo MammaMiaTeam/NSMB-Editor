@@ -50,6 +50,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pictureBox1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "MinimapControl";
             this.Resize += new System.EventHandler(this.MinimapControl_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
