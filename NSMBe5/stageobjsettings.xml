@@ -925,7 +925,7 @@ Unused behaviours:
 			<category id="18" />
 			<notes></notes>
 			<files>/enemy/iron_ball.nsbmd</files>
-			<field id="37-44" type="list" name="Direction" values="0=Left,1=Right,2=Towards player,16=Towards player from right only,17=Towards player from left only" notes="" />
+			<field id="37-44" type="list" name="Direction" values="0=Left,1=Right,2=Towards player,16=Towards player from their right only,17=Towards player their from left only" notes="" />
 			<field id="45-48" type="list" name="Speed" values="0=Slope only,1=60 pixels/sec,2=90 pixels/sec,3=120 pixels/sec" notes="" />
 			<field id="33-36" type="checkbox" name="Bounce on walls faster" values="1" notes="" />
 			<field id="9-16" type="value" name="Destroyer ID 1" values="" notes="The spiked ball won't spawn while the ID is activated. 0=disable" />
