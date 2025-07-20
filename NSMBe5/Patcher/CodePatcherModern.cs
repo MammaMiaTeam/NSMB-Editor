@@ -18,6 +18,7 @@
 using System;
 using System.IO;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace NSMBe5.Patcher
 {
@@ -84,7 +85,12 @@ namespace NSMBe5.Patcher
 
 			string procArgs = process;
 			if (Control.ModifierKeys == Keys.Shift && process == "ncpatcher")
-				procArgs += " -v && pause";
+			{
+				procArgs += " -v";
+
+				if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+					procArgs += " && pause";
+			}
 			RunProcessThrow(procArgs, romdir.FullName);
 		}
 

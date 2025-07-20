@@ -18,6 +18,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace NSMBe5.Patcher
 {
@@ -46,8 +47,18 @@ namespace NSMBe5.Patcher
 		public static int RunProcess(string proc, string cwd)
 		{
 			ProcessStartInfo info = new ProcessStartInfo();
-			info.FileName = "cmd";
-			info.Arguments = "/C " + proc + " || pause";
+
+			if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+			{
+				info.FileName = "cmd.exe";
+				info.Arguments = "/C " + proc + " || pause";
+			}
+			else
+			{
+				info.FileName = "/bin/bash";
+				info.Arguments = "-c \"" + proc + "\"";
+			}
+			
 			info.CreateNoWindow = false;
 			info.UseShellExecute = false;
 			info.WorkingDirectory = cwd;
