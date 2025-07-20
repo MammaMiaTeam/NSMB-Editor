@@ -129,6 +129,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="9.0.7" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="BNXL\BNBL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -602,15 +605,9 @@
     <None Include="Languages\Portuguese.ini">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
+    <Compile Include="Configuration\AppSettings.cs" />
+    <Compile Include="Configuration\ConfigurationManager.cs" />
+    <Compile Include="Properties\SettingsWrapper.cs" />
     <Compile Include="Editor\StageObjEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -635,9 +632,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sprite.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icons\block.png" />
