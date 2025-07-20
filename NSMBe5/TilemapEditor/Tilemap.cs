@@ -148,17 +148,26 @@ namespace NSMBe5
 //                    if (t.hflip == false && t.vflip == false)
 
                     Rectangle rect = Image2D.getTileRectangle(buffers[t.palNum], 8, t.tileNum);
-                    Bitmap tile = new Bitmap(8, 8, System.Drawing.Imaging.PixelFormat.Format32bppPArgb);
-                    Graphics g = Graphics.FromImage(tile);
-                    g.DrawImage(buffers[t.palNum], new Rectangle(0, 0, 8, 8), rect, GraphicsUnit.Pixel);
-                    if (t.hflip == true && t.vflip == false)
-                        tile.RotateFlip(RotateFlipType.RotateNoneFlipX);
-                    else if (t.hflip == false && t.vflip == true)
-                        tile.RotateFlip(RotateFlipType.RotateNoneFlipY);
-                    else if (t.hflip == true && t.vflip == true)
-                        tile.RotateFlip(RotateFlipType.RotateNoneFlipXY); 
-                    
-                    bufferGx.DrawImage(tile, new Rectangle(x * 8, y * 8, 8, 8), new Rectangle(0, 0, 8, 8), GraphicsUnit.Pixel);
+                    using (Bitmap tileSrc = new Bitmap(8, 8, System.Drawing.Imaging.PixelFormat.Format32bppPArgb))
+                    {
+                        using (Graphics g = Graphics.FromImage(tileSrc))
+                        {
+                            g.DrawImage(buffers[t.palNum], new Rectangle(0, 0, 8, 8), rect, GraphicsUnit.Pixel);
+                        }
+
+                        // Clone the bitmap before flipping to avoid GDI+ issues
+                        using (Bitmap tile = (Bitmap)tileSrc.Clone())
+                        {
+                            if (t.hflip == true && t.vflip == false)
+                                tile.RotateFlip(RotateFlipType.RotateNoneFlipX);
+                            else if (t.hflip == false && t.vflip == true)
+                                tile.RotateFlip(RotateFlipType.RotateNoneFlipY);
+                            else if (t.hflip == true && t.vflip == true)
+                                tile.RotateFlip(RotateFlipType.RotateNoneFlipXY);
+
+                            bufferGx.DrawImage(tile, new Rectangle(x * 8, y * 8, 8, 8), new Rectangle(0, 0, 8, 8), GraphicsUnit.Pixel);
+                        }
+                    }
                 }
             return buffer;
         }
