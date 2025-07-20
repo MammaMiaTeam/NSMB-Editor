@@ -25,6 +25,8 @@ using NSMBe5.Patcher;
 using System.Diagnostics;
 using System.Drawing;
 using NSMBe5.Plugin;
+using System.Linq;
+using NSMBe5.TilemapEditor;
 
 namespace NSMBe5 {
     public partial class LevelChooser : Form
@@ -34,6 +36,7 @@ namespace NSMBe5 {
         // init has to be used because Winforms is setting the value of autoBackupTime before the form loads
         //   This causes it to be saved in the settings before the settings value is loaded.
         public bool init = false;
+        private bool romLoaded = false;
 
         public static void showImgMgr()
         {
@@ -56,13 +59,19 @@ namespace NSMBe5 {
                 autoBackupTime.Value = Properties.Settings.Default.AutoBackup;
             init = true;
 
-            filesystemBrowser1.Load(ROM.FS);
+            // Check if ROM is loaded
+            romLoaded = ROM.FS != null;
 
-            PluginManager.Initialize();
-
-			LoadLevelNames();
-            if (ROM.UserInfo != null)
-                musicList.Items.AddRange(ROM.UserInfo.getFullList("Music").ToArray());
+            if (romLoaded)
+            {
+                LoadROMDependentData();
+            }
+            else
+            {
+                // Set title without ROM name
+                Text = "NSMB Editor " + Version.GetString();
+                DisableROMDependentControls();
+            }
 
             LanguageManager.ApplyToContainer(this, "LevelChooser");
             openROMDialog.Filter = LanguageManager.Get("Filters", "rom");
@@ -72,7 +81,10 @@ namespace NSMBe5 {
             savePatchDialog.Filter = LanguageManager.Get("Filters", "patch");
             openTextFileDialog.Filter = LanguageManager.Get("Filters", "text");
             saveTextFileDialog.Filter = LanguageManager.Get("Filters", "text");
-            Activate();
+            
+            // Load recent files
+            LoadRecentFiles();
+            
             //Get Language Files
             string langDir = System.IO.Path.Combine(Application.StartupPath, "Languages");
             if (System.IO.Directory.Exists(langDir)) {
@@ -89,32 +101,6 @@ namespace NSMBe5 {
             languagesComboBox.SelectedItem = Properties.Settings.Default.LanguageFile;
             languagesComboBox.SelectedIndexChanged += new EventHandler(languagesComboBox_SelectedIndexChanged);
 
-            // Load file backups from crash
-            string backupPath = Path.Combine(Application.StartupPath, "Backup");
-            if (ROM.fileBackups.Count > 0) {
-                foreach (string filename in ROM.fileBackups) {
-                    try
-                    {
-                        new LevelEditor(new NSMBLevel(LevelSource.getForBackupLevel(filename, backupPath))).Show();
-                    }
-                    catch (Exception) { }
-                }
-            }
-
-
-            Text = "NSMB Editor " + Version.GetString() + " - " + ROM.filename;
-            versionLabel.Text = "NSMB Editor " + Version.GetString() + " " + Properties.Resources.BuildDate.Trim();
-            Icon = Properties.Resources.nsmbe;
-
-            if (!ROM.isNSMBRom)
-            {
-                tabControl1.TabPages.Remove(tabPage2);
-                tabControl1.TabPages.Remove(tabPage5);
-                tabControl1.TabPages.Remove(tabPage6);
-                nsmbToolsGroupbox.Enabled = false;
-                musicSlotsGrp.Enabled = false;
-            }
-
             string[] codePatchingMethods =
             {
                 "NSMBe",
@@ -130,6 +116,12 @@ namespace NSMBe5 {
 
             fontTextBox.Text = Properties.Settings.Default.UIFont;
             Program.ApplyFontToControls(Controls);
+            
+            versionLabel.Text = "NSMB Editor " + Version.GetString() + " " + Properties.Resources.BuildDate.Trim();
+            Icon = Properties.Resources.nsmbe;
+            
+            UpdateMenuState();
+            Activate();
         }
 
         private void LoadLevelNames()
@@ -964,5 +956,354 @@ namespace NSMBe5 {
 		{
 			PluginSelector.Open();
 		}
+
+        #region Menu Event Handlers
+
+        private void openROMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenROM();
+        }
+
+        private void openBackupsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenBackups();
+        }
+
+        private void closeROMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CloseROM();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void connectToNetworkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConnectToNetwork();
+        }
+
+        #endregion
+
+        #region ROM Management Methods
+
+        private void OpenROM()
+        {
+            string path = "";
+
+            OpenFileDialog openROMDialog = new OpenFileDialog();
+            openROMDialog.Filter = LanguageManager.Get("Filters", "rom");
+            if (Properties.Settings.Default.ROMFolder != "")
+                openROMDialog.InitialDirectory = Properties.Settings.Default.ROMFolder;
+            if (openROMDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                path = openROMDialog.FileName;
+
+            if (path == "")
+                return;
+
+            LoadROMFromPath(path);
+        }
+
+        private void OpenBackups()
+        {
+            if (Properties.Settings.Default.BackupFiles == "" ||
+                MessageBox.Show(LanguageManager.Get("StartForm", "OpenBackups"), LanguageManager.Get("StartForm", "OpenBackupsTitle"), MessageBoxButtons.YesNo) != DialogResult.Yes)
+                return;
+
+            string[] backups = Properties.Settings.Default.BackupFiles.Split(';');
+            string path = backups[0];
+
+            if (path == "")
+                return;
+
+            // Add remaining backups to the ROM backup list
+            for (int l = 1; l < backups.Length; l++)
+                ROM.fileBackups.Add(backups[l]);
+
+            LoadROMFromPath(path);
+        }
+
+        private void LoadROMFromPath(string path)
+        {
+            try
+            {
+                NitroROMFilesystem fs = new NitroROMFilesystem(path);
+                Properties.Settings.Default.ROMPath = path;
+                Properties.Settings.Default.Save();
+                Properties.Settings.Default.ROMFolder = System.IO.Path.GetDirectoryName(path);
+                Properties.Settings.Default.Save();
+
+                ROM.load(fs);
+                StageObjSettings.Load();
+
+                romLoaded = true;
+                LoadROMDependentData();
+                UpdateMenuState();
+                
+                // Add to recent files
+                AddToRecentFiles(path);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void LoadROMDependentData()
+        {
+            if (!romLoaded) return;
+
+            filesystemBrowser1.Load(ROM.FS);
+            PluginManager.Initialize();
+
+            LoadLevelNames();
+            if (ROM.UserInfo != null)
+            {
+                musicList.Items.Clear();
+                musicList.Items.AddRange(ROM.UserInfo.getFullList("Music").ToArray());
+            }
+
+            // Load file backups from crash
+            string backupPath = Path.Combine(Application.StartupPath, "Backup");
+            if (ROM.fileBackups.Count > 0) {
+                foreach (string filename in ROM.fileBackups) {
+                    try
+                    {
+                        new LevelEditor(new NSMBLevel(LevelSource.getForBackupLevel(filename, backupPath))).Show();
+                    }
+                    catch (Exception) { }
+                }
+            }
+
+            Text = "NSMB Editor " + Version.GetString() + " - " + ROM.filename;
+
+            if (!ROM.isNSMBRom)
+            {
+                if (tabControl1.TabPages.Contains(tabPage2))
+                    tabControl1.TabPages.Remove(tabPage2);
+                if (tabControl1.TabPages.Contains(tabPage5))
+                    tabControl1.TabPages.Remove(tabPage5);
+                if (tabControl1.TabPages.Contains(tabPage6))
+                    tabControl1.TabPages.Remove(tabPage6);
+                nsmbToolsGroupbox.Enabled = false;
+                musicSlotsGrp.Enabled = false;
+            }
+            else
+            {
+                if (!tabControl1.TabPages.Contains(tabPage2))
+                    tabControl1.TabPages.Insert(0, tabPage2);
+                if (!tabControl1.TabPages.Contains(tabPage5))
+                    tabControl1.TabPages.Insert(1, tabPage5);
+                if (!tabControl1.TabPages.Contains(tabPage6))
+                    tabControl1.TabPages.Insert(2, tabPage6);
+                nsmbToolsGroupbox.Enabled = true;
+                musicSlotsGrp.Enabled = true;
+            }
+
+            EnableROMDependentControls();
+        }
+
+        private void CloseROM()
+        {
+            if (!romLoaded) return;
+
+            // Close all ROM-dependent windows
+            CloseROMDependentWindows();
+
+            // Clear ROM data and properly close file handles
+            ROM.close();
+            ROM.FS = null;
+            ROM.filename = "";
+            romLoaded = false;
+
+            // Clear UI
+            levelTreeView.Nodes.Clear();
+            musicList.Items.Clear();
+            filesystemBrowser1.Load(null);
+
+            // Update title
+            Text = "NSMB Editor " + Version.GetString();
+
+            DisableROMDependentControls();
+            UpdateMenuState();
+        }
+
+        private void CloseROMDependentWindows()
+        {
+            // Close static forms that are tracked
+            if (imgMgr != null && !imgMgr.IsDisposed)
+            {
+                imgMgr.Close();
+                imgMgr = null;
+            }
+
+            if (DataFinderForm != null && !DataFinderForm.IsDisposed)
+            {
+                DataFinderForm.Close();
+                DataFinderForm = null;
+            }
+
+            // Close all forms that depend on ROM data
+            Form[] openForms = Application.OpenForms.Cast<Form>().ToArray();
+            foreach (Form form in openForms)
+            {
+                // Skip the main LevelChooser form
+                if (form == this)
+                    continue;
+
+                // Close forms
+                form.Close();
+            }
+        }
+
+        private void ConnectToNetwork()
+        {
+            try
+            {
+                NetFilesystem fs = new NetFilesystem(hostTextBox.Text, Int32.Parse(portTextBox.Text));
+                ROM.load(fs);
+                StageObjSettings.Load();
+
+                romLoaded = true;
+                LoadROMDependentData();
+                UpdateMenuState();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void EnableROMDependentControls()
+        {
+            tabControl1.Enabled = true;
+        }
+
+        private void DisableROMDependentControls()
+        {
+            tabControl1.Enabled = false;
+        }
+
+        private void UpdateMenuState()
+        {
+            closeROMToolStripMenuItem.Enabled = romLoaded;
+            openBackupsToolStripMenuItem.Enabled = Properties.Settings.Default.BackupFiles != "";
+            recentFilesToolStripMenuItem.Enabled = true; // Recent files should always be accessible
+        }
+
+        #endregion
+
+        #region Recent Files Management
+
+        private const int MaxRecentFiles = 10;
+
+        private void LoadRecentFiles()
+        {
+            UpdateRecentFilesMenu();
+        }
+
+        private void AddToRecentFiles(string filePath)
+        {
+            if (string.IsNullOrEmpty(filePath))
+                return;
+
+            var recentFiles = GetRecentFiles();
+            
+            // Remove if already exists
+            recentFiles.Remove(filePath);
+            
+            // Add to beginning
+            recentFiles.Insert(0, filePath);
+            
+            // Keep only MaxRecentFiles
+            while (recentFiles.Count > MaxRecentFiles)
+                recentFiles.RemoveAt(recentFiles.Count - 1);
+            
+            // Save back to settings
+            Properties.Settings.Default.RecentFiles = string.Join(";", recentFiles.ToArray());
+            Properties.Settings.Default.Save();
+            
+            UpdateRecentFilesMenu();
+        }
+
+        private List<string> GetRecentFiles()
+        {
+            var recentFiles = new List<string>();
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.RecentFiles))
+            {
+                var files = Properties.Settings.Default.RecentFiles.Split(';');
+                foreach (var file in files)
+                {
+                    if (!string.IsNullOrEmpty(file) && System.IO.File.Exists(file))
+                        recentFiles.Add(file);
+                }
+            }
+            return recentFiles;
+        }
+
+        private void UpdateRecentFilesMenu()
+        {
+            // Clear existing recent files
+            recentFilesToolStripMenuItem.DropDownItems.Clear();
+            
+            var recentFiles = GetRecentFiles();
+            
+            if (recentFiles.Count == 0)
+            {
+                var emptyItem = new ToolStripMenuItem("(No recent files)");
+                emptyItem.Enabled = false;
+                recentFilesToolStripMenuItem.DropDownItems.Add(emptyItem);
+            }
+            else
+            {
+                for (int i = 0; i < recentFiles.Count; i++)
+                {
+                    var fileName = System.IO.Path.GetFileName(recentFiles[i]);
+                    var menuText = $"&{i + 1} {fileName}";
+                    var menuItem = new ToolStripMenuItem(menuText);
+                    menuItem.Tag = recentFiles[i];
+                    menuItem.Click += RecentFileMenuItem_Click;
+                    recentFilesToolStripMenuItem.DropDownItems.Add(menuItem);
+                }
+                
+                // Add separator and clear option
+                recentFilesToolStripMenuItem.DropDownItems.Add(new ToolStripSeparator());
+                var clearItem = new ToolStripMenuItem("Clear Recent Files");
+                clearItem.Click += ClearRecentFiles_Click;
+                recentFilesToolStripMenuItem.DropDownItems.Add(clearItem);
+            }
+        }
+
+        private void RecentFileMenuItem_Click(object sender, EventArgs e)
+        {
+            var menuItem = sender as ToolStripMenuItem;
+            if (menuItem?.Tag is string filePath)
+            {
+                if (System.IO.File.Exists(filePath))
+                {
+                    LoadROMFromPath(filePath);
+                }
+                else
+                {
+                    MessageBox.Show($"File not found: {filePath}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Remove from recent files if it doesn't exist
+                    var recentFiles = GetRecentFiles();
+                    recentFiles.Remove(filePath);
+                    Properties.Settings.Default.RecentFiles = string.Join(";", recentFiles.ToArray());
+                    Properties.Settings.Default.Save();
+                    UpdateRecentFilesMenu();
+                }
+            }
+        }
+
+        private void ClearRecentFiles_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.RecentFiles = "";
+            Properties.Settings.Default.Save();
+            UpdateRecentFilesMenu();
+        }
+
+        #endregion
     }
 }

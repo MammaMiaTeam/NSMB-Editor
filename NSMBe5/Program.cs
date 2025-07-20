@@ -66,7 +66,7 @@ namespace NSMBe5
             }
             else
             {
-                new StartForm().Show();
+                new LevelChooser().Show();
             }
 
             Application.Run();

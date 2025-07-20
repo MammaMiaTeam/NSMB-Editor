@@ -96,6 +96,13 @@ namespace NSMBe5.DSFileSystem
             extractFileDialog.Filter = LanguageManager.Get("Filters", "all");
             replaceFileDialog.Filter = LanguageManager.Get("Filters", "all");
 
+            fileTreeView.Nodes.Clear();
+
+            if (fs == null)
+            {
+                return;
+            }
+
             TreeNode main = new TreeNode(fs.mainDir.name, 0, 0);
             main.Tag = fs.mainDir;
 

@@ -27,6 +27,19 @@ namespace NSMBe5 {
         private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LevelChooser));
+			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.openROMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.openBackupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.recentFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.closeROMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.connectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.connectToNetworkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.hostTextBox = new System.Windows.Forms.ToolStripTextBox();
+			this.portTextBox = new System.Windows.Forms.ToolStripTextBox();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.openClipboard = new System.Windows.Forms.Button();
@@ -95,6 +108,7 @@ namespace NSMBe5 {
 			this.saveTextFileDialog = new System.Windows.Forms.SaveFileDialog();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.openROMDialog = new System.Windows.Forms.OpenFileDialog();
+			this.menuStrip1.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
 			this.tabPage5.SuspendLayout();
@@ -111,6 +125,105 @@ namespace NSMBe5 {
 			this.tabPage4.SuspendLayout();
 			this.SuspendLayout();
 			// 
+			// menuStrip1
+			// 
+			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.connectToolStripMenuItem});
+			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+			this.menuStrip1.Name = "menuStrip1";
+			this.menuStrip1.Size = new System.Drawing.Size(767, 24);
+			this.menuStrip1.TabIndex = 1;
+			this.menuStrip1.Text = "menuStrip1";
+			// 
+			// fileToolStripMenuItem
+			// 
+			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openROMToolStripMenuItem,
+            this.openBackupsToolStripMenuItem,
+            this.recentFilesToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.closeROMToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.exitToolStripMenuItem});
+			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+			this.fileToolStripMenuItem.Text = "File";
+			// 
+			// openROMToolStripMenuItem
+			// 
+			this.openROMToolStripMenuItem.Name = "openROMToolStripMenuItem";
+			this.openROMToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+			this.openROMToolStripMenuItem.Text = "Open ROM...";
+			this.openROMToolStripMenuItem.Click += new System.EventHandler(this.openROMToolStripMenuItem_Click);
+			// 
+			// openBackupsToolStripMenuItem
+			// 
+			this.openBackupsToolStripMenuItem.Name = "openBackupsToolStripMenuItem";
+			this.openBackupsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+			this.openBackupsToolStripMenuItem.Text = "Open Backups";
+			this.openBackupsToolStripMenuItem.Click += new System.EventHandler(this.openBackupsToolStripMenuItem_Click);
+			// 
+			// recentFilesToolStripMenuItem
+			// 
+			this.recentFilesToolStripMenuItem.Name = "recentFilesToolStripMenuItem";
+			this.recentFilesToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+			this.recentFilesToolStripMenuItem.Text = "Recent Files";
+			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
+			// 
+			// closeROMToolStripMenuItem
+			// 
+			this.closeROMToolStripMenuItem.Enabled = false;
+			this.closeROMToolStripMenuItem.Name = "closeROMToolStripMenuItem";
+			this.closeROMToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+			this.closeROMToolStripMenuItem.Text = "Close ROM";
+			this.closeROMToolStripMenuItem.Click += new System.EventHandler(this.closeROMToolStripMenuItem_Click);
+			// 
+			// toolStripSeparator2
+			// 
+			this.toolStripSeparator2.Name = "toolStripSeparator2";
+			this.toolStripSeparator2.Size = new System.Drawing.Size(144, 6);
+			// 
+			// exitToolStripMenuItem
+			// 
+			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+			this.exitToolStripMenuItem.Text = "Exit";
+			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+			// 
+			// connectToolStripMenuItem
+			// 
+			this.connectToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.connectToNetworkToolStripMenuItem,
+            this.hostTextBox,
+            this.portTextBox});
+			this.connectToolStripMenuItem.Name = "connectToolStripMenuItem";
+			this.connectToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+			this.connectToolStripMenuItem.Text = "Connect";
+			// 
+			// connectToNetworkToolStripMenuItem
+			// 
+			this.connectToNetworkToolStripMenuItem.Name = "connectToNetworkToolStripMenuItem";
+			this.connectToNetworkToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+			this.connectToNetworkToolStripMenuItem.Text = "Connect";
+			this.connectToNetworkToolStripMenuItem.Click += new System.EventHandler(this.connectToNetworkToolStripMenuItem_Click);
+			// 
+			// hostTextBox
+			// 
+			this.hostTextBox.Name = "hostTextBox";
+			this.hostTextBox.Size = new System.Drawing.Size(100, 23);
+			this.hostTextBox.Text = "localhost";
+			// 
+			// portTextBox
+			// 
+			this.portTextBox.Name = "portTextBox";
+			this.portTextBox.Size = new System.Drawing.Size(100, 23);
+			this.portTextBox.Text = "7777";
+			// 
 			// tabControl1
 			// 
 			this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -122,11 +235,11 @@ namespace NSMBe5 {
 			this.tabControl1.Controls.Add(this.tabPage1);
 			this.tabControl1.Controls.Add(this.tabPage3);
 			this.tabControl1.Controls.Add(this.tabPage4);
-			this.tabControl1.Location = new System.Drawing.Point(17, 15);
+			this.tabControl1.Location = new System.Drawing.Point(17, 39);
 			this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(733, 594);
+			this.tabControl1.Size = new System.Drawing.Size(733, 570);
 			this.tabControl1.TabIndex = 0;
 			// 
 			// tabPage2
@@ -778,23 +891,25 @@ namespace NSMBe5 {
 			// 
 			// creditsLabel
 			// 
-			this.creditsLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.creditsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.creditsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.creditsLabel.Location = new System.Drawing.Point(0, 124);
+			this.creditsLabel.Location = new System.Drawing.Point(4, 124);
 			this.creditsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.creditsLabel.Name = "creditsLabel";
-			this.creditsLabel.Size = new System.Drawing.Size(723, 202);
+			this.creditsLabel.Size = new System.Drawing.Size(717, 202);
 			this.creditsLabel.TabIndex = 8;
 			this.creditsLabel.Text = resources.GetString("creditsLabel.Text");
 			this.creditsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// linkNSMBHD
 			// 
-			this.linkNSMBHD.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.linkNSMBHD.Location = new System.Drawing.Point(0, 418);
+			this.linkNSMBHD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.linkNSMBHD.Location = new System.Drawing.Point(4, 418);
 			this.linkNSMBHD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.linkNSMBHD.Name = "linkNSMBHD";
-			this.linkNSMBHD.Size = new System.Drawing.Size(723, 28);
+			this.linkNSMBHD.Size = new System.Drawing.Size(717, 28);
 			this.linkNSMBHD.TabIndex = 7;
 			this.linkNSMBHD.TabStop = true;
 			this.linkNSMBHD.Text = "NSMB Hacking Domain";
@@ -804,11 +919,12 @@ namespace NSMBe5 {
 			// 
 			// linkOgRepo
 			// 
-			this.linkOgRepo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.linkOgRepo.Location = new System.Drawing.Point(0, 391);
+			this.linkOgRepo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.linkOgRepo.Location = new System.Drawing.Point(4, 391);
 			this.linkOgRepo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.linkOgRepo.Name = "linkOgRepo";
-			this.linkOgRepo.Size = new System.Drawing.Size(723, 28);
+			this.linkOgRepo.Size = new System.Drawing.Size(717, 28);
 			this.linkOgRepo.TabIndex = 6;
 			this.linkOgRepo.TabStop = true;
 			this.linkOgRepo.Text = "NSMBe on GitHub [The original repo]";
@@ -818,11 +934,12 @@ namespace NSMBe5 {
 			// 
 			// linkRepo
 			// 
-			this.linkRepo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.linkRepo.Location = new System.Drawing.Point(0, 363);
+			this.linkRepo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.linkRepo.Location = new System.Drawing.Point(4, 363);
 			this.linkRepo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.linkRepo.Name = "linkRepo";
-			this.linkRepo.Size = new System.Drawing.Size(723, 28);
+			this.linkRepo.Size = new System.Drawing.Size(717, 28);
 			this.linkRepo.TabIndex = 5;
 			this.linkRepo.TabStop = true;
 			this.linkRepo.Text = "NSMBe on GitHub [The maintained repo]";
@@ -832,64 +949,73 @@ namespace NSMBe5 {
 			// 
 			// lblLinksHeader
 			// 
-			this.lblLinksHeader.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.lblLinksHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.lblLinksHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblLinksHeader.Location = new System.Drawing.Point(0, 338);
+			this.lblLinksHeader.Location = new System.Drawing.Point(4, 338);
 			this.lblLinksHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblLinksHeader.Name = "lblLinksHeader";
-			this.lblLinksHeader.Size = new System.Drawing.Size(723, 25);
+			this.lblLinksHeader.Size = new System.Drawing.Size(717, 25);
 			this.lblLinksHeader.TabIndex = 4;
 			this.lblLinksHeader.Text = "Links";
 			this.lblLinksHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// lblCreditsHeader
 			// 
-			this.lblCreditsHeader.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.lblCreditsHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.lblCreditsHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCreditsHeader.Location = new System.Drawing.Point(0, 100);
+			this.lblCreditsHeader.Location = new System.Drawing.Point(4, 100);
 			this.lblCreditsHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblCreditsHeader.Name = "lblCreditsHeader";
-			this.lblCreditsHeader.Size = new System.Drawing.Size(723, 25);
+			this.lblCreditsHeader.Size = new System.Drawing.Size(717, 25);
 			this.lblCreditsHeader.TabIndex = 2;
 			this.lblCreditsHeader.Text = "Credits";
 			this.lblCreditsHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// versionLabel
 			// 
-			this.versionLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.versionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.versionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.versionLabel.Location = new System.Drawing.Point(0, 65);
+			this.versionLabel.Location = new System.Drawing.Point(4, 65);
 			this.versionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.versionLabel.Name = "versionLabel";
-			this.versionLabel.Size = new System.Drawing.Size(723, 34);
+			this.versionLabel.Size = new System.Drawing.Size(717, 34);
 			this.versionLabel.TabIndex = 1;
 			this.versionLabel.Text = "Version X";
 			this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// appNameLabel
 			// 
-			this.appNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.appNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.appNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.appNameLabel.Location = new System.Drawing.Point(0, 20);
+			this.appNameLabel.Location = new System.Drawing.Point(4, 20);
 			this.appNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.appNameLabel.Name = "appNameLabel";
-			this.appNameLabel.Size = new System.Drawing.Size(723, 46);
+			this.appNameLabel.Size = new System.Drawing.Size(717, 46);
 			this.appNameLabel.TabIndex = 0;
 			this.appNameLabel.Text = "New Super Mario Bros. Editor";
 			this.appNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// LevelChooser
 			// 
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(767, 623);
 			this.Controls.Add(this.tabControl1);
+			this.Controls.Add(this.menuStrip1);
+			this.MainMenuStrip = this.menuStrip1;
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "LevelChooser";
 			this.Text = "<_TITLE>";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LevelChooser_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LevelChooser_FormClosed);
 			this.Load += new System.EventHandler(this.LevelChooser_Load);
+			this.menuStrip1.ResumeLayout(false);
+			this.menuStrip1.PerformLayout();
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage2.ResumeLayout(false);
 			this.tabPage5.ResumeLayout(false);
@@ -980,5 +1106,18 @@ namespace NSMBe5 {
 		private System.Windows.Forms.TextBox fontTextBox;
 		private System.Windows.Forms.Button setFontBtn;
 		private System.Windows.Forms.Button managePluginsBtn;
+		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem openROMToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem openBackupsToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem recentFilesToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+		private System.Windows.Forms.ToolStripMenuItem closeROMToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem connectToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem connectToNetworkToolStripMenuItem;
+		private System.Windows.Forms.ToolStripTextBox hostTextBox;
+		private System.Windows.Forms.ToolStripTextBox portTextBox;
 	}
 }
