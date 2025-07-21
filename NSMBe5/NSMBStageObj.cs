@@ -3237,69 +3237,74 @@ namespace NSMBe5
 			int RenderX = X * 16;
 			int RenderY = Y * 16;
 
-			ImageAttributes attr = new ImageAttributes();
-			attr.SetColorMatrix(new ColorMatrix() { Matrix33 = alpha });
-
-			// Extend the liquid texture to 32 pixels in width
-			Bitmap liquid = new Bitmap(32, 16);
-			using (Graphics gl = Graphics.FromImage(liquid))
+			using (ImageAttributes attr = new ImageAttributes())
 			{
-				gl.DrawImage(texture, new Rectangle( 0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, attr);
-				gl.DrawImage(texture, new Rectangle(16, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, attr);
-			}
+				attr.SetColorMatrix(new ColorMatrix() { Matrix33 = alpha });
 
-			Color liquidBorderColor = liquid.GetPixel(0, 15);
-
-			var liquidBrush = new SolidBrush(liquidBorderColor);
-
-			var liquidGradientBrush = new LinearGradientBrush(
-				new Rectangle(0, 0, 1, 16),
-				liquidBorderColor,
-				Color.FromArgb(0, liquidBorderColor),
-				LinearGradientMode.Vertical
-			);
-
-			// Render the liquid wave
-			Bitmap wave = new Bitmap(64, 32);
-			using (Graphics gw = Graphics.FromImage(wave))
-			{
-				gw.InterpolationMode = InterpolationMode.NearestNeighbor;
-
-				int[] offsets = new int[] { 0, 1, 2, 3, 2, 3, 2, 1, 0 };
-				int[] widths = new int[] { 4, 6, 6, 9, 14, 9, 6, 6, 4 };
-
-				int x = 0;
-				for (int i = 0; i < offsets.Length; i++)
+				// Extend the liquid texture to 32 pixels in width
+				using (Bitmap liquid = new Bitmap(32, 16))
 				{
-					Rectangle dst = new Rectangle(x, 16 - offsets[i], widths[i], 16);
+					using (Graphics gl = Graphics.FromImage(liquid))
+					{
+						gl.DrawImage(texture, new Rectangle(0, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, attr);
+						gl.DrawImage(texture, new Rectangle(16, 0, 16, 16), 0, 0, 16, 16, GraphicsUnit.Pixel, attr);
+					}
 
-					// Draw wave
-					gw.DrawImage(liquid, dst, x % 16, 0, widths[i], 16, GraphicsUnit.Pixel);
+					Color liquidBorderColor = liquid.GetPixel(0, 15);
 
-					// Draw liquid
-					gw.FillRectangle(liquidBrush, new Rectangle(x, 32 - offsets[i], widths[i], offsets[i]));
+					using (var liquidBrush = new SolidBrush(liquidBorderColor))
+					using (var liquidGradientBrush = new LinearGradientBrush(
+						new Point(0, 0),
+						new Point(0, 16),
+						liquidBorderColor,
+						Color.FromArgb(0, liquidBorderColor)
+					))
+					{
+						// Render the liquid wave
+						using (Bitmap wave = new Bitmap(64, 32))
+						{
+							using (Graphics gw = Graphics.FromImage(wave))
+							{
+								gw.InterpolationMode = InterpolationMode.NearestNeighbor;
 
-					x += widths[i];
+								int[] offsets = new int[] { 0, 1, 2, 3, 2, 3, 2, 1, 0 };
+								int[] widths = new int[] { 4, 6, 6, 9, 14, 9, 6, 6, 4 };
+
+								int x = 0;
+								for (int i = 0; i < offsets.Length; i++)
+								{
+									Rectangle dst = new Rectangle(x, 16 - offsets[i], widths[i], 16);
+
+									// Draw wave
+									gw.DrawImage(liquid, dst, x % 16, 0, widths[i], 16, GraphicsUnit.Pixel);
+
+									// Draw liquid
+									gw.FillRectangle(liquidBrush, new Rectangle(x, 32 - offsets[i], widths[i], offsets[i]));
+
+									x += widths[i];
+								}
+							}
+
+							int x1 = 0;
+							int x2 = 512;
+
+							for (int x = x1; x < x2; x += 4)
+							{
+								int len = Math.Min(x2 - x, 4);
+
+								// Draw wave
+								g.DrawImage(wave, new Rectangle(x * 16, RenderY - 16, len * 16, 32), 0, 0, 64, 32, GraphicsUnit.Pixel);
+
+								// Draw liquid
+								g.FillRectangle(liquidBrush, new Rectangle(x * 16, RenderY + 16, len * 16, 16));
+
+								// Draw liquid fade out
+								g.FillRectangle(liquidGradientBrush, new Rectangle(x * 16, RenderY + 32, len * 16, 16));
+							}
+						}
+					}
 				}
 			}
-
-			int x1 = 0;
-			int x2 = 512;
-
-			for (int x = x1; x < x2; x += 4)
-			{
-				int len = Math.Min(x2 - x, 4);
-
-				// Draw wave
-				g.DrawImage(wave, new Rectangle(x * 16, RenderY - 16, len * 16, 32), 0, 0, 64, 32, GraphicsUnit.Pixel);
-
-				// Draw liquid
-				g.FillRectangle(liquidBrush, new Rectangle(x * 16, RenderY + 16, len * 16, 16));
-
-				// Draw liquid fade out
-				g.FillRectangle(liquidGradientBrush, new Rectangle(x * 16, RenderY + 32, len * 16, 16));
-			}
-
 		}
 
 		public void RenderDefaultImg(Graphics g, int renderX, int renderY)
