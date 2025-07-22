@@ -24,7 +24,7 @@ namespace NSMBe5
 	public static class Version
 	{
 		public const int Major = 5;
-		public const int Minor = 4;
+		public const int Minor = 5;
 		public const int Patch = 0;
 
 		public static string GetString() {
