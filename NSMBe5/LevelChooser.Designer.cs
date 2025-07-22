@@ -93,9 +93,9 @@ namespace NSMBe5 {
 			this.chkAutoBackup = new System.Windows.Forms.CheckBox();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
 			this.creditsLabel = new System.Windows.Forms.Label();
-			this.linkNSMBHD = new System.Windows.Forms.LinkLabel();
-			this.linkOgRepo = new System.Windows.Forms.LinkLabel();
-			this.linkRepo = new System.Windows.Forms.LinkLabel();
+			this.linkNSMBHD = new System.Windows.Forms.Label();
+			this.linkOgRepo = new System.Windows.Forms.Label();
+			this.linkRepo = new System.Windows.Forms.Label();
 			this.lblLinksHeader = new System.Windows.Forms.Label();
 			this.lblCreditsHeader = new System.Windows.Forms.Label();
 			this.versionLabel = new System.Windows.Forms.Label();
@@ -906,46 +906,49 @@ namespace NSMBe5 {
 			// 
 			this.linkNSMBHD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.linkNSMBHD.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.linkNSMBHD.ForeColor = System.Drawing.Color.Blue;
 			this.linkNSMBHD.Location = new System.Drawing.Point(4, 418);
 			this.linkNSMBHD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.linkNSMBHD.Name = "linkNSMBHD";
 			this.linkNSMBHD.Size = new System.Drawing.Size(717, 28);
 			this.linkNSMBHD.TabIndex = 7;
-			this.linkNSMBHD.TabStop = true;
 			this.linkNSMBHD.Text = "NSMB Hacking Domain";
 			this.linkNSMBHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.toolTip1.SetToolTip(this.linkNSMBHD, "http://nsmbhd.net/");
-			this.linkNSMBHD.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkNSMBHD_LinkClicked);
+			this.linkNSMBHD.Click += new System.EventHandler(this.linkNSMBHD_Click);
 			// 
 			// linkOgRepo
 			// 
 			this.linkOgRepo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.linkOgRepo.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.linkOgRepo.ForeColor = System.Drawing.Color.Blue;
 			this.linkOgRepo.Location = new System.Drawing.Point(4, 391);
 			this.linkOgRepo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.linkOgRepo.Name = "linkOgRepo";
 			this.linkOgRepo.Size = new System.Drawing.Size(717, 28);
 			this.linkOgRepo.TabIndex = 6;
-			this.linkOgRepo.TabStop = true;
 			this.linkOgRepo.Text = "NSMBe on GitHub [The original repo]";
 			this.linkOgRepo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.toolTip1.SetToolTip(this.linkOgRepo, "https://github.com/Dirbaio/NSMB-Editor");
-			this.linkOgRepo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkOgRepo_LinkClicked);
+			this.linkOgRepo.Click += new System.EventHandler(this.linkOgRepo_Click);
 			// 
 			// linkRepo
 			// 
 			this.linkRepo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.linkRepo.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.linkRepo.ForeColor = System.Drawing.Color.Blue;
 			this.linkRepo.Location = new System.Drawing.Point(4, 363);
 			this.linkRepo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.linkRepo.Name = "linkRepo";
 			this.linkRepo.Size = new System.Drawing.Size(717, 28);
 			this.linkRepo.TabIndex = 5;
-			this.linkRepo.TabStop = true;
 			this.linkRepo.Text = "NSMBe on GitHub [The maintained repo]";
 			this.linkRepo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.toolTip1.SetToolTip(this.linkRepo, "https://github.com/MammaMiaTeam/NSMB-Editor");
-			this.linkRepo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRepo_LinkClicked);
+			this.linkRepo.Click += new System.EventHandler(this.linkRepo_Click);
 			// 
 			// lblLinksHeader
 			// 
@@ -1069,7 +1072,7 @@ namespace NSMBe5 {
         private System.Windows.Forms.Label versionLabel;
         private System.Windows.Forms.Label appNameLabel;
         private System.Windows.Forms.Label lblCreditsHeader;
-        private System.Windows.Forms.LinkLabel linkRepo;
+        private System.Windows.Forms.Label linkRepo;
         private System.Windows.Forms.Label lblLinksHeader;
         private System.Windows.Forms.GroupBox patchesGroupbox;
         private System.Windows.Forms.GroupBox nsmbToolsGroupbox;
@@ -1099,8 +1102,8 @@ namespace NSMBe5 {
         private System.Windows.Forms.ComboBox patchMethodComboBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox languagesComboBox;
-        private System.Windows.Forms.LinkLabel linkNSMBHD;
-        private System.Windows.Forms.LinkLabel linkOgRepo;
+        private System.Windows.Forms.Label linkNSMBHD;
+        private System.Windows.Forms.Label linkOgRepo;
         private System.Windows.Forms.Label creditsLabel;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.TextBox fontTextBox;

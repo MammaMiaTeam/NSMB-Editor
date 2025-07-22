@@ -915,17 +915,17 @@ namespace NSMBe5 {
             MessageBox.Show(text, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void linkRepo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkRepo_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/TheGameratorT/NSMB-Editor");
         }
 
-        private void linkOgRepo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkOgRepo_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/Dirbaio/NSMB-Editor");
         }
 
-        private void linkNSMBHD_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkNSMBHD_Click(object sender, EventArgs e)
         {
             Process.Start("https://nsmbhd.net");
         }
