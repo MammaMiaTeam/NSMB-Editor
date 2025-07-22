@@ -87,7 +87,16 @@ namespace NSMBe5
             InitializeComponent();
             LanguageManager.ApplyToContainer(this, "BackgroundList");
 
+            RefreshList();
+        }
+
+        public void RefreshList()
+        {
+            // Clear existing items
+            tilesetListBox.Items.Clear();
+
             if (ROM.UserInfo == null) return;
+            
             int id = 0;
             List<string> list = ROM.UserInfo.getFullList("Foregrounds");
             foreach (string name in list)

@@ -1064,6 +1064,10 @@ namespace NSMBe5 {
                 musicList.Items.AddRange(ROM.UserInfo.getFullList("Music").ToArray());
             }
 
+            // Refresh tileset and background lists
+            tilesetList1.RefreshList();
+            backgroundList1.RefreshList();
+
             // Load file backups from crash
             string backupPath = Path.Combine(Application.StartupPath, "Backup");
             if (ROM.fileBackups.Count > 0) {
@@ -1121,6 +1125,10 @@ namespace NSMBe5 {
             levelTreeView.Nodes.Clear();
             musicList.Items.Clear();
             filesystemBrowser1.Load(null);
+
+            // Refresh tileset and background lists (clear them)
+            tilesetList1.RefreshList();
+            backgroundList1.RefreshList();
 
             // Update title
             Text = "NSMB Editor " + Version.GetString();

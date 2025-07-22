@@ -37,13 +37,23 @@ namespace NSMBe5
             //TODO add this shit to the language file
 //            LanguageManager.ApplyToContainer(this, "TilesetList");
 
+            RefreshList();
+        }
+
+        public void RefreshList()
+        {
+            // Clear existing items
+            tilesetListBox.Items.Clear();
+
             // Add tilesets to list
             List<string> parsedlist = new List<string>();
 
-            parsedlist.Add("Tileset 0 (Jyotyu)");
-            parsedlist.Add("Tileset 2 (Sub Nohara)");
+            // Only load if ROM is open
             if (ROM.UserInfo != null)
             {
+                parsedlist.Add("Tileset 0 (Jyotyu)");
+                parsedlist.Add("Tileset 2 (Sub Nohara)");
+                
                 foreach (string name in ROM.UserInfo.getFullList("Tilesets"))
                 {
                     string trimmedname = name.Trim();
@@ -51,6 +61,7 @@ namespace NSMBe5
                     parsedlist.Add(trimmedname);
                 }
             }
+            
             tilesetListBox.Items.AddRange(parsedlist.ToArray());
         }
 
